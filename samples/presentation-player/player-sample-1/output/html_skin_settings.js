@@ -1,0 +1,5 @@
+{
+    "sidePanelSettings": {
+        "sidePanelAtLeft": true
+    }
+}

@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<presentation title="iSpring Technology: PowerPoint to Flash Excellence" width="720.0000000" height="540.0000000" thmbWidth="0.0000000" thmbHeight="0.0000000" frameRate="24.0000000" looping="0" startingSlideShow="" pptVersion="2013" type="compound" hasExternalAudio="0" uid="{62DB7161-1671-4138-922E-35F50758940D}">
+	<presenters/>
+	<references/>
+	<soundAssets/>
+	<sharedAssetsLibrary src="assets.swf"/>
+	<graphicAssets/>
+	<backgroundSound soundAssetId="" looping="0" volume="1.0000000"/>
+	<narration/>
+	<settings>
+		<navigation>
+			<keyboard enabled="1">
+				<actions>
+					<action name="playPause">
+						<shortcut code="32" control="0" shift="0"/>
+					</action>
+					<action name="nextSlide">
+						<shortcut code="34" control="0" shift="0"/>
+					</action>
+					<action name="previousSlide">
+						<shortcut code="33" control="0" shift="0"/>
+					</action>
+					<action name="nextStep">
+						<shortcut code="13" control="0" shift="0"/>
+					</action>
+					<action name="previousStep">
+						<shortcut code="13" control="0" shift="1"/>
+					</action>
+					<action name="firstSlide">
+						<shortcut code="36" control="1" shift="0"/>
+					</action>
+					<action name="lastSlide">
+						<shortcut code="35" control="1" shift="0"/>
+					</action>
+					<action name="lastViewedSlide">
+						<shortcut code="8" control="0" shift="0"/>
+					</action>
+					<action name="slideStart">
+						<shortcut code="36" control="0" shift="0"/>
+					</action>
+					<action name="slideEnd">
+						<shortcut code="35" control="0" shift="0"/>
+					</action>
+					<action name="seekForward">
+						<shortcut code="39" control="0" shift="0"/>
+					</action>
+					<action name="seekBackward">
+						<shortcut code="37" control="0" shift="0"/>
+					</action>
+					<action name="volumeUp">
+						<shortcut code="38" control="0" shift="0"/>
+					</action>
+					<action name="volumeDown">
+						<shortcut code="40" control="0" shift="0"/>
+					</action>
+					<action name="toggleFullscreen">
+						<shortcut code="70" control="1" shift="0"/>
+					</action>
+				</actions>
+			</keyboard>
+			<mouse enabled="1" target="step"/>
+			<gesture zoom="1"/>
+		</navigation>
+		<appearance fullScreen="0" showSlidePreloader="1"/>
+		<playback autoStart="1" syncWithVideoNarration="1" enableVideoControl="1" resumePresentationPlayback="never"/>
+	</settings>
+	<slides embedded="0">
+		<slide index="0" title="PowerPoint to Flash Excellence" titleNormalized="powerpoint to flash excellence" src="slide1.swf" size="4559" advanceOnTime="1" framesCount="1" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="" duration="0.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="0" playTime="0.0010000" pauseTime="2.3840000"/>
+			</animationSteps>
+			<notes>
+			</notes>
+			<notesNormalized/>
+			<notesHtml>&lt;p&gt;&lt;font size="18"&gt;  &lt;/font&gt;&lt;/p&gt;</notesHtml>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+PowerPoint to Flash Excellence
+iSpring Technology Overview</text>
+		</slide>
+		<slide index="1" title="Animations: Words and Letters, Combination" titleNormalized="animations: words and letters, combination" src="slide2.swf" size="9212" advanceOnTime="1" framesCount="402" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="401" playTime="16.7083333" pauseTime="1.2916667"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Fly in
+Spin
+Fly in
+and splin
+Animations: Words and Letters, Repeat, Combination
+Animations by words
+and letters
+Animation effects combination
+Repeating animation effects</text>
+		</slide>
+		<slide index="2" title="Animations: Trigger Animation Effect" titleNormalized="animations: trigger animation effect" src="slide3.swf" size="31771" advanceOnTime="0" framesCount="1" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="" duration="0.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="0" playTime="0.0010000" pauseTime="0.0090000"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Animations: Trigger Animation Effect
+Click here
+Click here
+Click here
+Click here</text>
+		</slide>
+		<slide index="3" title="Animations: Advanced animation techniques" titleNormalized="animations: advanced animation techniques" src="slide4.swf" size="14395" advanceOnTime="0" framesCount="181" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="180" playTime="7.5000000" pauseTime="0.0000000"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Animations: Advanced animation techniques</text>
+		</slide>
+		<slide index="4" title="Advanced Text Formatting" titleNormalized="advanced text formatting" src="slide5.swf" size="7988" advanceOnTime="1" framesCount="109" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="108" playTime="4.5000000" pauseTime="3.5000000"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Advanced Text Formatting
+Regular Texts
+Bold Texts
+Underlined texts
+Shadowed texts
+Texts of multiple styles, fonts, size and colors
+Various styles of bullets
+Picture bullets
+Numbered bullets
+Character bullets</text>
+		</slide>
+		<slide index="5" title="Basic PowerPoint Objects" titleNormalized="basic powerpoint objects" src="slide6.swf" size="26697" advanceOnTime="1" framesCount="217" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="216" playTime="9.0000000" pauseTime="5.0000000"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Basic PowerPoint Objects
+Circle
+Vector shapes
+Raster images
+Lines
+Pie
+Star</text>
+		</slide>
+		<slide index="6" title="Tables" titleNormalized="tables" src="slide7.swf" size="25145" advanceOnTime="1" framesCount="49" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="48" playTime="2.0000000" pauseTime="3.0000000"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Tables</text>
+		</slide>
+		<slide index="7" title="Video Objects" titleNormalized="video objects" src="slide8.swf" size="70840" advanceOnTime="1" framesCount="765" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos>
+				<video id="video0" videoClipId="ispring.resources_27d0aee0.spr0_604757594" slides="0" repeat="1" volume="0.5000000" posterFrameId="ispring.resources_27d0aee0.spr2_604757594" playFullScreen="0" hideWhenNotPlaying="0" rewindAfterPlaying="0"/>
+			</videos>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands>
+				<playVideo frameIndex="0" videoId="video0" startPos="0.0000000"/>
+			</videoCommands>
+			<animationSteps>
+				<step start="0" end="764" playTime="11.0000000" pauseTime="0.0000000"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Video Objects</text>
+		</slide>
+		<slide index="8" title="Geometry and Positioning: Shapes conversion" titleNormalized="geometry and positioning: shapes conversion" src="slide9.swf" size="19930" advanceOnTime="1" framesCount="1" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="0" playTime="0.0010000" pauseTime="4.9990000"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Precise Shapes Conversion and Positioning
+Down
+Ribbon
+Vertical
+Scroll
+Callout
+Heart</text>
+		</slide>
+		<slide index="9" title="Hyperlinks" titleNormalized="hyperlinks" src="slide10.swf" size="6064" advanceOnTime="1" framesCount="61" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="60" playTime="2.5000000" pauseTime="2.5000000"/>
+			</animationSteps>
+			<notes/>
+			<notesNormalized/>
+			<notesHtml/>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Hyperlinks
+‹‹ Previous Slide
+Next Slide ››
+www.ispringsolutions.com</text>
+		</slide>
+		<slide index="10" title="Learn more about PowerPoint to Flash Excellence www.ispringsolutions.com" titleNormalized="learn more about powerpoint to flash excellence www.ispringsolutions.com" src="slide11.swf" size="21061" advanceOnTime="1" framesCount="73" hasEmbeddedFlashClip="0" hidden="0" level="0" advanceOnClick="1" thumbnailAssetId="">
+			<sounds/>
+			<videos/>
+			<transitionEffect name="PushLeft" duration="1.0000000" soundId="" looped="0"/>
+			<soundCommands/>
+			<videoCommands/>
+			<animationSteps>
+				<step start="0" end="72" playTime="3.0000000" pauseTime="7.0000000"/>
+			</animationSteps>
+			<notes>
+			</notes>
+			<notesNormalized/>
+			<notesHtml>&lt;p&gt;&lt;font size="18"&gt;  &lt;/font&gt;&lt;/p&gt;</notesHtml>
+			<text>Copyright © 2005-2012 iSpring Solutions, Inc. All rights reserved.
+Learn more about PowerPoint to Flash Excellence www.ispringsolutions.com 
+Best in Class PowerPoint to Flash Solutions
+iSpring Kinetics
+iSpring Online
+iSpring Platform
+iSpring Pro
+iSpring QuizMaker</text>
+		</slide>
+	</slides>
+</presentation>

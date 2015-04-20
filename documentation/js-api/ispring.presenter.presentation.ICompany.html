@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Interface: ICompany</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img class="logo_img" src="images/logo.png" alt="logo">
+        <h1>iSpring JavaScript API Documentaion</h1>
+        <div class="clear"></div>
+    </div>
+    <div class="header_border">        
+    </div>
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.presentation.ICompany.html">ICompany</a></li><li><a href="ispring.presenter.presentation.IPresentation.html">IPresentation</a></li><li><a href="ispring.presenter.presentation.IPresenter.html">IPresenter</a></li><li><a href="ispring.presenter.presentation.IPresenters.html">IPresenters</a></li><li><a href="ispring.presenter.presentation.ITimestamp.html">ITimestamp</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+
+
+<section>
+
+<header>
+    
+        <h5 class="left">
+            interface
+                
+        </h5>
+        <span class="ancestors">
+            <a href="ispring.html">ispring</a><a href="ispring.presenter.html">.presenter</a><a href="ispring.presenter.presentation.html">.presentation</a>.ICompany
+        </span>
+        <div class="clear"></div>
+    
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        The ICompany interface provides the company information associated with the presentation or a presenter.<p>To obtain company information of the loaded presentation use the<a href="ispring.presenter.presentation.IPresentation.html#company"><code>company()</code></a> method on the<a href="ispring.presenter.presentation.IPresentation.html"><code>IPresentation</code></a> interface.To obtain company information of a particular presenter use the<a href="ispring.presenter.presentation.IPresenter.html#company"><code>company()</code></a> method on the<a href="ispring.presenter.presentation.IPresenter.html"><code>IPresenter</code></a> interface.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.IPresentation.html">ispring.presenter.presentation.IPresentation</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.presentation.IPresenter.html">ispring.presenter.presentation.IPresenter</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+
+<dt>
+    <h4 class="name" id="logo"><span class="type-signature"></span>logo<span class="signature">()</span><span class="type-signature"> &rarr; (nullable) {<a href="ispring.utils.assets.IGraphicAsset.html">ispring.utils.assets.IGraphicAsset</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.utils.assets.IGraphicAsset.html"><code>IGraphicAsset</code></a> interface providing access to the company logoor <code>null</code> if no logo is associated with the company.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.utils.assets.IGraphicAsset.html">ispring.utils.assets.IGraphicAsset</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.utils.assets.IGraphicAsset.html">ispring.utils.assets.IGraphicAsset</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="webSiteTarget"><span class="type-signature"></span>webSiteTarget<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the target window name where the company web site is to be opened when a user clicksthe company logo.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">string</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="webSiteUrl"><span class="type-signature"></span>webSiteUrl<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the web site address of the company or an empty string if the web site information is not specified.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">string</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br clear="both">
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

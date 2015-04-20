@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html <!--{ISPRING_HTML_ATTRIBUTES}-->>
+<head>
+	<!--{ISPRING_HEAD_CONTENT}-->
+	<!--{ISPRING_IOS_CHECK}-->
+
+	<style>
+		body * {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-webkit-touch-callout: none;
+			-webkit-user-drag: none;
+		}
+		#playerView {
+			position:relative;
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-webkit-touch-callout:none;
+			-webkit-user-drag:none;
+		}
+		#playerView * {
+			position:absolute;
+		}
+
+		#player {
+			position: absolute;
+		}
+		#player.sidePanelAtLeft #content {
+			right: 0;
+		}
+		#player.sidePanelAtLeft #sidePanel {
+			border-right: 1px solid #CCCCCC;
+		}
+		#player.sidePanelAtLeft #controlPanel {
+			left: 280px;
+			right: 0;
+		}
+		#player.sidePanelAtRight #sidePanel {
+			right: 0;
+			border-left: 1px solid #CCCCCC;
+		}
+		#player.sidePanelAtRight #narrationView {
+			right: 0;
+		}
+		#player.sidePanelAtRight #controlPanel {
+			left: 0;
+			right: 280px;
+		}
+		#titlePanel {
+			position: relative;
+			height: 50px;
+			background-color: #AFD4FF;
+			color: #000000;
+			padding-left: 10px;
+			line-height: 50px;
+			font-family: Arial;
+		}
+		#content {
+			top: 50px;
+			position: absolute;
+		}
+
+		#narrationView {
+			position: absolute;
+			width: 280px;
+		}
+
+		#sidePanel {
+			top: 50px;
+			width: 279px;
+			bottom: 0;
+			background-color: #E6E6E6;
+			position: absolute;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+
+		#sidePanel .item {
+			position: relative;
+			height: 80px;
+			width: 157px;
+			border: 1px solid #B7BABC;
+			border-top: 1px solid #5B5D5E;
+			background-color: #FFFFFF;
+			padding-left: 110px;
+			padding-right: 10px;
+			padding-top: 8px;
+			cursor: pointer;
+			font-family: Arial;
+			font-size: 12px;
+		}
+
+		#sidePanel .item:hover,
+		#sidePanel .item.selected:hover{
+			background-color: #DAF1FF;
+			border-color: #0093EF;
+		}
+
+		#sidePanel .item.selected {
+			background-color: #9AD8FF;
+		}
+
+		#sidePanel .item .thumbnail {
+			width: 97px;
+			height: 73px;
+			top: 8px;
+			left: 8px;
+			position: absolute;
+			outline: 1px solid #E6E6E6;
+			background-size: contain;
+		}
+
+		#controlPanel {
+			height: 60px;
+			background-color: #AFD4FF;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#controlPanel button,
+		#controlPanel button[disabled]:active {
+			border: 2px outset buttonface;
+		}
+
+		#controlPanel button[disabled] {
+			opacity: 0.7;
+		}
+
+		#controlPanel button:active {
+			border-style: inset;
+		}
+
+		#controlPanel #play {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			top: 5px;
+			left: 5px;
+		}
+
+		#controlPanel #play:after {
+			position: absolute;
+			background: url(data/play_icon.png) no-repeat center;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
+		#controlPanel #play.selected:after {
+			background: url(data/pause_icon.png) no-repeat center;
+		}
+
+		#controlPanel #prev {
+			position: absolute;
+			width: 50px;
+			height: 25px;
+			top: 17px;
+			left: 65px;
+		}
+
+		#controlPanel #prev:after {
+			position: absolute;
+			background: url(data/prev_icon.png) no-repeat center;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		
+		#controlPanel #next {
+			position: absolute;
+			width: 50px;
+			height: 25px;
+			top: 17px;
+			left: 125px;
+		}
+
+		#controlPanel #next:after {
+			position: absolute;
+			background: url(data/next_icon.png) no-repeat center;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
+		#progressBar {
+			position: absolute;
+			top: 17px;
+			right: 125px;
+			left: 194px;
+			height: 23px;
+			border: 1px solid #B7BABC;
+			background: #DAEAFC;
+			cursor: pointer;
+		}
+
+		#progressBar #progress {
+			top: -1px;
+			left: -1px;
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			background: #D1EDFE;
+			border: 1px solid #009DFF;
+		}
+
+		#progressBar #slideLabel {
+			position: absolute;
+			left: 5px;
+			top: 0;
+			line-height: 25px;
+			font-family: Arial;
+		}
+
+		#progressBar #timeLabel {
+			position: absolute;
+			right: 5px;
+			top: 0;
+			line-height: 25px;
+			font-family: Arial;
+		}
+
+		#muteButton {
+			position: absolute;
+			top: 17px;
+			right: 90px;
+			width: 25px;
+			height: 25px;
+		}
+
+		#muteButton:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url(data/volume_icon.png) center no-repeat;
+		}
+
+		#muteButton.selected:after {
+			background-image: url(data/mute_icon.png);
+		}
+
+		#volumeControl {
+			position: absolute;
+			top: 28px;
+			right: 10px;
+			height: 2px;
+			background: #DBDCDD;
+			border: 1px solid #AEB2B4;
+			border-radius: 2px;
+			width: 73px;
+		}
+
+		#volumeControl[disabled] {
+			opacity: 0.5;
+		}
+
+		#volumeControl #volumeThumb {
+			position: absolute;
+			top: -6px;
+			bottom: -6px;
+			width: 4px;
+			border-radius: 2px;
+			background-color: #7CACCC;
+			border: 1px solid #888888;
+			left: -3px;
+		}
+	</style>
+</head>
+<body>
+	<script src="data/core.js?%RANDOM_SEED%"></script>
+	<script src="data/player.js?%RANDOM_SEED%"></script>
+	<script src="data/side_panel.js?%RANDOM_SEED%"></script>
+	<script src="data/control_panel.js?%RANDOM_SEED%"></script>
+	<div id="player">
+		<div id="titlePanel"></div>
+		<div id="sidePanel"></div>
+		<div id="content"></div>
+		<div id="controlPanel">
+			<button id="play"></button>
+			<button id="prev"></button>
+			<button id="next"></button>
+
+			<div id="progressBar">
+				<div id="progress"></div>
+				<div id="slideLabel"></div>
+				<div id="timeLabel"></div>
+			</div>
+
+			<button id="muteButton"></button>
+
+			<div id="volumeControl">
+				<div id="volumeThumb"></div>
+			</div>
+		</div>
+	</div>
+	<!--{ISPRING_BODY_CONTENT}-->
+	<script>
+		(function(){
+			function start()
+			{
+				var presInfo = {/*ISPRING_PRESENTATION_INFO*/};
+				PlayerCore.createPlayer(presInfo, "playerView", onPlayerCreated);
+				function onPlayerCreated(player)
+				{
+					new SampleSkin(player);
+
+					player.start();
+				}
+			}
+			
+			start();
+		})();
+	</script>
+</body>
+</html>

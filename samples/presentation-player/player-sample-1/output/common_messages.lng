@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<language>
+
+  <messages>
+    <message id="PB_MESSAGE_BOX_NO">No</message>
+    <message id="PB_MESSAGE_BOX_OK">OK</message>
+    <message id="PB_MESSAGE_BOX_YES">Yes</message>
+    <message id="PB_PRECEDING_QUIZ_FAILED_WINDOW_TEXT">You are not allowed to advance because you did not pass the quiz at slide %SLIDE_INDEX%.</message>
+    <message id="PB_PRECEDING_QUIZ_FAILED_WINDOW_TITLE">Warning</message>
+    <message id="PB_PRECEDING_QUIZ_NOT_COMPLETED_WINDOW_TEXT">You must attempt the quiz at slide %SLIDE_INDEX% to advance.</message>
+    <message id="PB_PRECEDING_QUIZ_NOT_COMPLETED_WINDOW_TITLE">Warning</message>
+    <message id="PB_PRECEDING_QUIZ_NOT_PASSED_WINDOW_TEXT">You must pass the quiz at slide %SLIDE_INDEX% to advance.</message>
+    <message id="PB_PRECEDING_QUIZ_NOT_PASSED_WINDOW_TITLE">Warning</message>
+    <message id="PB_QUIZ_SLIDE_WINDOW_TEXT">You must complete the quiz before leaving this slide.</message>
+    <message id="PB_QUIZ_SLIDE_WINDOW_TITLE">Warning</message>
+    <message id="PB_RESUME_PRESENTATION_WINDOW_TEXT">Would you like to resume the presentation from the last slide viewed?</message>
+    <message id="PB_RESUME_PRESENTATION_WINDOW_TITLE">Resume Presentation</message>
+  </messages>
+
+</language>

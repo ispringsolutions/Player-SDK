@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Interface: ISlides</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img class="logo_img" src="images/logo.png" alt="logo">
+        <h1>iSpring JavaScript API Documentaion</h1>
+        <div class="clear"></div>
+    </div>
+    <div class="header_border">        
+    </div>
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.presentation.slides.IAnimationStep.html">IAnimationStep</a></li><li><a href="ispring.presenter.presentation.slides.IAnimationSteps.html">IAnimationSteps</a></li><li><a href="ispring.presenter.presentation.slides.ISlide.html">ISlide</a></li><li><a href="ispring.presenter.presentation.slides.ISlideNotes.html">ISlideNotes</a></li><li><a href="ispring.presenter.presentation.slides.ISlides.html">ISlides</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+
+
+<section>
+
+<header>
+    
+        <h5 class="left">
+            interface
+                
+        </h5>
+        <span class="ancestors">
+            <a href="ispring.html">ispring</a><a href="ispring.presenter.html">.presenter</a><a href="ispring.presenter.presentation.html">.presentation</a><a href="ispring.presenter.presentation.slides.html">.slides</a>.ISlides
+        </span>
+        <div class="clear"></div>
+    
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        The ISlides interface represents a collection of the presentation slides.<p>To obtain the ISlides interface use the <a href="ispring.presenter.presentation.IPresentation.html#slides"><code>slides()</code></a> methodon the <a href="ispring.presenter.presentation.IPresentation.html"><code>IPresentation</code></a> interface.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.IPresentation.html#slides">ispring.presenter.presentation.IPresentation#slides</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+
+<dt>
+    <h4 class="name" id="convertTimestampToTime"><span class="type-signature"></span>convertTimestampToTime<span class="signature">(timestamp<span class="signature-attributes"> non-null</span>, considerTransitions<span class="signature-attributes"> opt</span>, skipHiddenSlides<span class="signature-attributes"> opt</span>)</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Calculates the time offset from the beginning of the presentation to the specified presentation position.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>timestamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The position within the presentation represented by the                                                              <a href="ispring.presenter.presentation.ITimestamp.html"><code>ITimestamp</code></a>                                                              interface to convert into the time offset.                                                              <p>You may pass an existing timestamp object obtained from the presentation                                                              player or create a new compatible timestamp using the                                                              <a href="ispring.presenter.presentation.slides.ISlides.html#createTimestamp"><code>createTimestamp()</code></a>                                                              method.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>considerTransitions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to include the slide transition duration when calculating the time offset, <code>true</code> by default.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>skipHiddenSlides</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to skip the presentation hidden slides when calculating the time offset, <code>true</code> by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#convertTimeToTimestamp">ispring.presenter.presentation.slides.ISlides#convertTimeToTimestamp</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#createTimestamp">ispring.presenter.presentation.slides.ISlides#createTimestamp</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The time offset, in seconds, to the specified presentation position from the beginning of the presentation.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="convertTimeToTimestamp"><span class="type-signature"></span>convertTimeToTimestamp<span class="signature">(time, considerTransitions<span class="signature-attributes"> opt</span>, skipHiddenSlides<span class="signature-attributes"> opt</span>)</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the position within the presentation that corresponds to the specified time offset.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The time offset, in seconds, from the beginning of the presentation.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>considerTransitions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to include the slide transition duration when calculating the timestamp, <code>true</code> by default.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>skipHiddenSlides</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to skip the presentation hidden slides when calculating the timestamp, <code>true</code> by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The <a href="ispring.presenter.presentation.ITimestamp.html"><code>ITimestamp</code></a> interface corresponding to the specified time offset.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="count"><span class="type-signature"></span>count<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the total number of slides within the collection.<p>The total number of the visible slides can be obtained using the<a href="ispring.presenter.presentation.slides.ISlides.html#visibleSlidesCount"><code>visibleSlidesCount()</code></a> method.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#visibleSlidesCount">ispring.presenter.presentation.slides.ISlides#visibleSlidesCount</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="createTimestamp"><span class="type-signature"></span>createTimestamp<span class="signature">(slideIndex, stepIndex, timeOffset)</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Creates a new compatible timestamp object that can be used as a parameter of the presentation player interface methods.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>slideIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Slide index within the presentation. The index of the first slide is 0.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>stepIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Animation step index within the slide. If the step index is equal to <code>-1</code>, the timestamp corresponds to the slide transition phase.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timeOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The time offset from the beginning of the animation step, in seconds.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="duration"><span class="type-signature"></span>duration<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the total duration of the presentation slides, in seconds. The slide duration is the sum of the total durationof the animation steps and the transition effects duration.<p>To obtain the total duration of visible slides including the duration of their transition effects,use the <a href="ispring.presenter.presentation.slides.ISlides.html#visibleSlidesDuration"><code>visibleSlidesDuration()</code></a> method.</p><p>To obtain the total duration of visible slides without the duration of their transition effects, use the<a href="ispring.presenter.presentation.slides.ISlides.html#visibleAnimationStepsDuration"><code>visibleAnimationStepsDuration()</code></a>method.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#visibleSlidesDuration">ispring.presenter.presentation.slides.ISlides#visibleSlidesDuration</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#visibleAnimationStepsDuration">ispring.presenter.presentation.slides.ISlides#visibleAnimationStepsDuration</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="getSlide"><span class="type-signature"></span>getSlide<span class="signature">(slideIndex)</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.presenter.presentation.slides.ISlide.html"><code>ISlide</code></a> interface of the slide at thespecified index.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>slideIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The index of the slide within the presentation. The <code>slideIndex</code> value mustbe in the range from 0 to the number of slides minus 1.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             If <code>slideIndex</code> is out of range.
+        </span>
+   </dl>
+</dt>
+
+
+
+        
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The slide at the specified index position
+</div>
+
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="getVisibleSlide"><span class="type-signature"></span>getVisibleSlide<span class="signature">(index)</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.presenter.presentation.slides.ISlide.html"><code>ISlide</code></a> interface of the visible slide at thespecified index. A visible slide is a slide that is not marked as "hidden".
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>index</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The index of the slide within the presentation. The index value must be in the range from 0 to the number of visible slides minus 1.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#getSlide">ispring.presenter.presentation.slides.ISlides#getSlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             If the <code>index</code> is out of range.
+        </span>
+   </dl>
+</dt>
+
+
+
+        
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The visible slide at the specified position.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="visibleAnimationStepsDuration"><span class="type-signature"></span>visibleAnimationStepsDuration<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the total duration, in seconds, of the animation steps on the visible slides only. It does not include the slide transition effects duration.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#duration">ispring.presenter.presentation.slides.ISlides#duration</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#visibleSlidesDuration">ispring.presenter.presentation.slides.ISlides#visibleSlidesDuration</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="visibleSlidesCount"><span class="type-signature"></span>visibleSlidesCount<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the number of slides not marked as "hidden".<p>The total number of slides (visible + hidden) can be obtained usingthe <a href="ispring.presenter.presentation.slides.ISlides.html#count"><code>count()</code></a> method.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#count">ispring.presenter.presentation.slides.ISlides#count</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="visibleSlidesDuration"><span class="type-signature"></span>visibleSlidesDuration<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the total duration, in seconds, of the presentation visible slides.<p>To obtain the total duration of all presentation slides (visible + hidden) use the<a href="ispring.presenter.presentation.slides.ISlides.html#duration"><code>duration()</code></a> method.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#duration">ispring.presenter.presentation.slides.ISlides#duration</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.ISlides.html#visibleAnimationStepsDuration">ispring.presenter.presentation.slides.ISlides#visibleAnimationStepsDuration</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br clear="both">
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

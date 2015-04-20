@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<player id="sample" descriptionPath="description.xml" priority="150" version="27"
+	xmlns="http://www.ispringsolutions.com/presenter/player" 
+	xmlns:t="http://www.ispringsolutions.com/common/types" 
+	xmlns:pt="http://www.ispringsolutions.com/presenter/player/types"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<playbackModules>
+		<commonSettings>
+			<t:i18n src="common_messages.lng"/>
+		</commonSettings>
+		<flash>
+			<settings>
+				<t:skin src="flash_skin_settings.xml"/>
+				<t:publishing src="flash_publishing_settings.xml"/>
+			</settings>
+			<module id="SampleFlash" requiredFlashVersion="101" src="sample_skin.swc" skinFactoryClass="sampleSkin.SamplePlaybackSkinFactory">
+				<features>
+					<videoNarration>true</videoNarration>
+				</features>
+			</module>
+		</flash>
+		<html5>
+			<settings>
+				<t:skin src="html_skin_settings.js"/>
+				<t:publishing src="html_publishing_settings.xml"/>
+			</settings>
+			<module id="SampleHtml">
+				<indexFile template="index.tpl.html"/>
+				<core target="data/core.js"/>
+				<submodules>
+					<submodule src="player.js" target="data/player.js"/>
+					<submodule src="side_panel.js" target="data/side_panel.js"/>
+					<submodule src="control_panel.js" target="data/control_panel.js"/>
+					<submodule src="play_icon.png" target="data/play_icon.png"/>
+					<submodule src="pause_icon.png" target="data/pause_icon.png"/>
+					<submodule src="prev_icon.png" target="data/prev_icon.png"/>
+					<submodule src="next_icon.png" target="data/next_icon.png"/>
+					<submodule src="mute_icon.png" target="data/mute_icon.png"/>
+					<submodule src="volume_icon.png" target="data/volume_icon.png"/>
+				</submodules>
+			</module>
+		</html5>
+	</playbackModules>
+	<preview>
+		<playerBackground src="preview.png"/>
+		<slideArea left="280" top="50" width="720" height="540" />
+	</preview>
+</player>

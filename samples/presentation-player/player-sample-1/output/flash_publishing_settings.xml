@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<publishSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pt="http://www.ispringsolutions.com/presenter/player/types">
+	<playerModule id="SampleFlash"/>
+	<playerDimensions>
+		<pt:additionalSize height="110" width="280"/>
+	</playerDimensions>
+	<presentationContent>
+    <metadata>
+      <pt:references>true</pt:references>
+      <pt:texts>
+        <pt:dynamicText type="DT_SLIDE_TEXT"/>
+        <pt:dynamicText type="DT_SLIDE_TITLE"/>
+        <pt:dynamicText type="DT_PRESENTATION_TITLE"/>
+        <pt:dynamicText type="DT_HYPERLINK_TOOLTIP"/>
+      </pt:texts>
+    </metadata>
+    
+		<resources>
+      <thumbnailSets>
+        <pt:set enlargeToFit="false" jpegQuality="100" keepAspectRatio="true">
+          <pt:extent height="73" width="97"/>
+        </pt:set>
+      </thumbnailSets>
+
+      <videoNarrations>
+        <pt:set>
+          <pt:extent height="480" width="640"/>
+        </pt:set>
+      </videoNarrations>
+
+       <fonts>
+        <font bold="false" embedName="sampleSkin.Font1" family="Arial" italic="false" substitutionFamily="Arial Unicode MS">
+          <pt:charsets>
+            <pt:static>0123456789:./…-</pt:static>
+	    <pt:static>No video available</pt:static>
+	    <pt:static>Slide:</pt:static>
+            <pt:dynamicPlain type="DCT_SLIDE_TITLE"/>
+            <pt:dynamicPlain type="DCT_SLIDE_TITLE"/>
+            <pt:dynamicPlain type="DCT_PRESENTATION_TITLE"/>
+            <pt:dynamicPlain type="DCT_HYPERLINK_TOOLTIP"/>
+           </pt:charsets>
+        </font>
+	<font bold="true" embedName="sampleSkin.Font1" family="Arial" italic="false" substitutionFamily="Arial Unicode MS">
+          <pt:charsets>
+            <pt:static>0123456789:./…-</pt:static>
+	    <pt:dynamicPlain type="DCT_PRESENTATION_TITLE"/>
+	  </pt:charsets>
+        </font>
+      </fonts>
+		</resources>
+	</presentationContent>
+</publishSettings>

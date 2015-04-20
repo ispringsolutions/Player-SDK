@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Namespace: clock</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img class="logo_img" src="images/logo.png" alt="logo">
+        <h1>iSpring JavaScript API Documentaion</h1>
+        <div class="clear"></div>
+    </div>
+    <div class="header_border">        
+    </div>
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.clock.IPresentationClock.html">IPresentationClock</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+
+
+<section>
+
+<header>
+    
+        <h5 class="left">
+            namespace
+                
+        </h5>
+        <span class="ancestors">
+            <a href="ispring.html">ispring</a><a href="ispring.presenter.html">.presenter</a><a href="ispring.presenter.player.html">.player</a>.clock
+        </span>
+        <div class="clear"></div>
+    
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5 class="subsection-title">Interfaces</h5>
+
+        <dl class="interfaces">
+            <dt class="interface"><a href="ispring.presenter.player.clock.IPresentationClock.html">IPresentationClock</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+     
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="PresentationClockState"><span class="type-signature">(static) </span>PresentationClockState<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The PresentationClockState object properties provide values for the<a href="ispring.presenter.player.clock.IPresentationClock.html#state"><code>state()</code></a> method of the<a href="ispring.presenter.player.clock.IPresentationClock.html"><code>IPresentationClock</code></a> interface.
+    </div>
+    
+
+    
+        <h5>
+            Type:
+            
+<span class="param-type">string</span>
+
+
+        </h5>
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>STARTED</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>started</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that the clock is started.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SUSPENDED</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>suspended</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that the clock is suspended. The clock switches to the suspended statewhen the presentation is waiting for the user's action.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BUFFERING</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>buffering</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that the clock has been suspended due to data buffering.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>STOPPED</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>stopped</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that the clock is stopped.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>REWINDING</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>rewinding</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that the slide transition effect is rewinding.</td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br clear="both">
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

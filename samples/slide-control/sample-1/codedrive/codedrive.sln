@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{CAB34F91-9657-4062-8D66-773B7E5432A1}") = "codedrive", "codedrive.cdproj", "{54127547-573F-4F13-9575-BF02882B5778}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54127547-573F-4F13-9575-BF02882B5778}.Debug|Default.ActiveCfg = Debug
+		{54127547-573F-4F13-9575-BF02882B5778}.Debug|Default.Build.0 = Debug
+		{54127547-573F-4F13-9575-BF02882B5778}.Release|Default.ActiveCfg = Release
+		{54127547-573F-4F13-9575-BF02882B5778}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

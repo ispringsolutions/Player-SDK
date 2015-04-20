@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Interface: IEventDispatcher</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img class="logo_img" src="images/logo.png" alt="logo">
+        <h1>iSpring JavaScript API Documentaion</h1>
+        <div class="clear"></div>
+    </div>
+    <div class="header_border">        
+    </div>
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.events.IEventDispatcher.html">IEventDispatcher</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+
+
+<section>
+
+<header>
+    
+        <h5 class="left">
+            interface
+                
+        </h5>
+        <span class="ancestors">
+            <a href="ispring.html">ispring</a><a href="ispring.events.html">.events</a>.IEventDispatcher
+        </span>
+        <div class="clear"></div>
+    
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        The IEventDispatcher interface provides methods for adding or removing event handlers.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+
+<dt>
+    <h4 class="name" id="addHandler"><span class="type-signature"></span>addHandler<span class="signature">(fn<span class="signature-attributes"> non-null</span>, context<span class="signature-attributes"> opt</span>, priority<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Registers an event handling function to be invoked when the event dispatcher dispatches the event.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The event handling function to be invoked when the event is dispatched.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The invocation context of the event handling function to be used as <code>this</code> parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priority</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The event handler priority, zero by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="removeHandler"><span class="type-signature"></span>removeHandler<span class="signature">(fn<span class="signature-attributes"> non-null</span>, context<span class="signature-attributes"> opt</span>, priority<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Removes an event handler from the event dispatcher object.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The event handling function to rename.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The invocation context of the event handling function.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>priority</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The event handler priority, zero by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br clear="both">
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

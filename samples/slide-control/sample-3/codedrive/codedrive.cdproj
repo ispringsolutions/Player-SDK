@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectTypeGuid>{CAB34F91-9657-4062-8D66-773B7E5432A1}</ProjectTypeGuid>
+    <ProjectName>codedrive</ProjectName>
+    <SchemaVersion>2.0</SchemaVersion>
+    <TargetVersion>10.0</TargetVersion>
+    <SourceFolders>..;..\..\..\..\src\sdk;..\..\..\..\sdk</SourceFolders>
+    <SwfWidth>600</SwfWidth>
+    <SwfHeight>400</SwfHeight>
+    <SwfFrameRate>60</SwfFrameRate>
+    <SwfBackground>#FFFFFF</SwfBackground>
+    <!--GenerateHtml Settings-->
+    <HtmlGeneratePlayAtStart>True</HtmlGeneratePlayAtStart>
+    <HtmlGenerateLoop>True</HtmlGenerateLoop>
+    <HtmlGenerateDisplayMenu>True</HtmlGenerateDisplayMenu>
+    <HtmlGenerateDeviceFont>False</HtmlGenerateDeviceFont>
+    <HtmlGenerateQuality>Best</HtmlGenerateQuality>
+    <HtmlGenerateScale>ShowAll</HtmlGenerateScale>
+    <HtmlGenerateWindowMode>Window</HtmlGenerateWindowMode>
+    <HtmlGenerateWidthPixels>550</HtmlGenerateWidthPixels>
+    <HtmlGenerateHeightPixels>400</HtmlGenerateHeightPixels>
+    <HtmlGenerateWidthPercent>100</HtmlGenerateWidthPercent>
+    <HtmlGenerateHeightPercent>100</HtmlGenerateHeightPercent>
+    <HtmlGenerateDimensions>MatchMovie</HtmlGenerateDimensions>
+    <HtmlGenerateAllowNetworking>All</HtmlGenerateAllowNetworking>
+    <HtmlGenerateAllowScriptAccess>Always</HtmlGenerateAllowScriptAccess>
+    <HtmlGenerateAllowFullScreen>True</HtmlGenerateAllowFullScreen>
+    <HtmlGenerateBackgroundColorType>MatchMovie</HtmlGenerateBackgroundColorType>
+    <HtmlGenerateBackgroundColor>#FFFFFF</HtmlGenerateBackgroundColor>
+    <HtmlGenerateFlashVars>
+    </HtmlGenerateFlashVars>
+    <MaxRecursionDepth>256</MaxRecursionDepth>
+    <ScriptTimeoutSeconds>15</ScriptTimeoutSeconds>
+    <MainFile>..\StandaloneSlidesPlayer.as</MainFile>
+    <UseNetwork>False</UseNetwork>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\</OutputPath>
+    <OutputFileName>sample-3.swf</OutputFileName>
+    <GenerateDebugInformation>True</GenerateDebugInformation>
+    <SwfCompress>True</SwfCompress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\</OutputPath>
+    <OutputFileName>slide_steps-cd.swf</OutputFileName>
+    <GenerateDebugInformation>False</GenerateDebugInformation>
+    <SwfCompress>True</SwfCompress>
+  </PropertyGroup>
+  <ItemGroup>
+    <SwcComponentItem Include="..\components.swc">
+      <LinkageType>IncludeAll</LinkageType>
+    </SwcComponentItem>
+  </ItemGroup>
+  <Import Project="$(RioBuildPath)\Rio.targets" />
+</Project>

@@ -1,0 +1,157 @@
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<style>
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    iframe {
+        position: absolute;
+        width: 800px;
+        height: 600px;
+        border: 1px solid #000;
+        top: 20px;
+        left: 20px;
+    }
+
+    #prev, #play_pause, #next {
+        top: 653px;
+        width: 104px;
+        height: 36px;
+        background: #F2F2F2;
+        position: absolute;
+        border: 1px solid #7F7F7F;
+        border-radius: 5px;
+        font-size: 18pt;
+    }
+
+    #prev {
+        left: 23px;
+    }
+
+    #play_pause {
+        left: 138px;
+    }
+
+    #next {
+        left: 253px;
+    }
+
+    #time, #slideIndex {
+        margin: 0;
+        padding: 0;
+
+        top: 656px;
+        font-size: 18pt;
+        font-family: Arial, sans-serif;
+        position: absolute;
+    }
+
+    #time {
+        left: 395px;
+    }
+
+    #slideIndex {
+        left: 497px;
+    }
+</style>
+<body>
+
+<iframe id="frame" src="presentation/index.html"></iframe>
+
+<button id="prev"><<</button>
+<button id="play_pause"></button>
+<button id="next">>></button>
+
+<p id="time"></p>
+<p id="slideIndex"></p>
+
+<script>
+    var PLAY = "Play";
+    var PAUSE = "Pause";
+
+    var ispringPresentationConnector = {};
+    var playbackController;
+
+    var prevBtn = document.getElementById("prev");
+    var playPauseBtn = document.getElementById("play_pause");
+    var nextBtn = document.getElementById("next");
+
+    var timeLabel = document.getElementById("time");
+    var slideIndexLabel = document.getElementById("slideIndex");
+
+    var slidesCount;
+    var isPlayedPresentation;
+
+    ispringPresentationConnector.register = function(player)
+    {
+        var presentation = player.presentation();
+        slidesCount = presentation.slides().count();
+        playbackController = player.view().playbackController();
+
+        changePlayPauseBtnState(presentation.settings().playback().autoStart());
+        initPlaybackControllerEventsHandlers();
+        initButtonsEventsHandlers();
+    };
+
+    function changePlayPauseBtnState(isPlayed)
+    {
+        if (isPlayedPresentation == isPlayed)
+        {
+            return;
+        }
+
+        isPlayedPresentation = isPlayed;
+        playPauseBtn.innerHTML = (isPlayedPresentation) ? PAUSE : PLAY;
+    }
+
+    function initPlaybackControllerEventsHandlers()
+    {
+        playbackController.slideChangeEvent().addHandler(function(slideIndex) {
+            slideIndexLabel.innerHTML = "Slide: " + (slideIndex + 1) + " of " + slidesCount;
+        });
+
+        playbackController.clock().tickEvent().addHandler(function(clock) {
+            var timeOffset = clock.timestamp().timeOffset();
+            var minutes = Math.floor(timeOffset / 60);
+            var seconds = Math.round(timeOffset % 60);
+
+            timeLabel.innerHTML = (minutes < 10) ? "0" + minutes : minutes;
+            timeLabel.innerHTML += ":";
+            timeLabel.innerHTML += (seconds < 10) ? "0" + seconds : seconds;
+        });
+    }
+
+    function initButtonsEventsHandlers()
+    {
+        prevBtn.onclick = function() {
+            playbackController.gotoPreviousSlide();
+            changePlayPauseBtnState(true);
+        };
+
+        playPauseBtn.onclick = function() {
+            if (isPlayedPresentation)
+            {
+                playPauseBtn.innerHTML = PLAY;
+                playbackController.pause();
+            }
+            else
+            {
+                playPauseBtn.innerHTML = PAUSE;
+                playbackController.play();
+            }
+            isPlayedPresentation = !isPlayedPresentation;
+        };
+
+        nextBtn.onclick = function() {
+            playbackController.gotoNextSlide();
+            changePlayPauseBtnState(true);
+        };
+    }
+</script>
+
+</body>
+</html>

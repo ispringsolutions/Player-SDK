@@ -1,0 +1,2689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Interface: IPresentationPlaybackController</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">
+        <img class="logo_img" src="images/logo.png" alt="logo">
+        <h1>iSpring JavaScript API Documentaion</h1>
+        <div class="clear"></div>
+    </div>
+    <div class="header_border">        
+    </div>
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.IPresentationPlaybackController.html">IPresentationPlaybackController</a></li><li><a href="ispring.presenter.player.IPresentationPlayer.html">IPresentationPlayer</a></li><li><a href="ispring.presenter.player.IPresentationView.html">IPresentationView</a></li><li><a href="ispring.presenter.player.IRestrictedPresentationPlaybackController.html">IRestrictedPresentationPlaybackController</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+
+
+<section>
+
+<header>
+    
+        <h5 class="left">
+            interface
+                
+        </h5>
+        <span class="ancestors">
+            <a href="ispring.html">ispring</a><a href="ispring.presenter.html">.presenter</a><a href="ispring.presenter.player.html">.player</a>.IPresentationPlaybackController
+        </span>
+        <div class="clear"></div>
+    
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        The IPresentationPlaybackController interface provides presentationplayback and navigation control facilities.<p>To obtain the IPresentationPlaybackController interface use the<a href="ispring.presenter.player.IPresentationView.html#playbackController"><code>playbackController()</code></a>method on the <a href="ispring.presenter.player.IPresentationView.html"><code>IPresentationView</code></a> interface.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+
+<dt>
+    <h4 class="name" id="clock"><span class="type-signature"></span>clock<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.player.clock.IPresentationClock.html">ispring.presenter.player.clock.IPresentationClock</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.presenter.player.clock.IPresentationClock.html"><code>IPresentationClock</code></a> interface that providesinformation about current playback state and position.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.clock.IPresentationClock.html">ispring.presenter.player.clock.IPresentationClock</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.presenter.player.clock.IPresentationClock.html">ispring.presenter.player.clock.IPresentationClock</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="currentSlide"><span class="type-signature"></span>currentSlide<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.presenter.presentation.slides.ISlide.html"><code>ISlide</code></a> interface of the current slide.If the current slide is not defined, the <code>Error</code> exception is thrown.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlideIndex">ispring.presenter.player.IPresentationPlaybackController#currentSlideIndex</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             If the current slide is not defined.
+        </span>
+   </dl>
+</dt>
+
+
+
+        
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="currentSlideIndex"><span class="type-signature"></span>currentSlideIndex<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the current slide index. If the current slide is not defined, for example, when user input is required to definethe starting slide of the presentation, <code>-1</code> is returned.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlide">ispring.presenter.player.IPresentationPlaybackController#currentSlide</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#firstSlideIndex">ispring.presenter.player.IPresentationPlaybackController#firstSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#lastSlideIndex">ispring.presenter.player.IPresentationPlaybackController#lastSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#nextSlideIndex">ispring.presenter.player.IPresentationPlaybackController#nextSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#previousSlideIndex">ispring.presenter.player.IPresentationPlaybackController#previousSlideIndex</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="firstSlideIndex"><span class="type-signature"></span>firstSlideIndex<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the presentation first slide index taking hidden slides and custom slide shows into account.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlideIndex">ispring.presenter.player.IPresentationPlaybackController#currentSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#nextSlideIndex">ispring.presenter.player.IPresentationPlaybackController#nextSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#lastSlideIndex">ispring.presenter.player.IPresentationPlaybackController#lastSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#previousSlideIndex">ispring.presenter.player.IPresentationPlaybackController#previousSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoFirstSlide">ispring.presenter.player.IPresentationPlaybackController#gotoFirstSlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoFirstSlide"><span class="type-signature"></span>gotoFirstSlide<span class="signature">(autoStart<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Moves to the first slide of the presentation.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autoStart</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to start slide playback automatically, <code>true</code> by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso">ispring.presenter.player.IPresentationPlaybackController#firstSlide</li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoLastSlide">ispring.presenter.player.IPresentationPlaybackController#gotoLastSlide</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoNextSlide">ispring.presenter.player.IPresentationPlaybackController#gotoNextSlide</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoPreviousSlide">ispring.presenter.player.IPresentationPlaybackController#gotoPreviousSlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoLastSlide"><span class="type-signature"></span>gotoLastSlide<span class="signature">(autoStart<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Moves to the presentation last slide.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autoStart</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to start slide playback automatically, <code>true</code> by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso">ispring.presenter.player.IPresentationPlaybackController#lastSlide</li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoFirstSlide">ispring.presenter.player.IPresentationPlaybackController#gotoFirstSlide</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoNextSlide">ispring.presenter.player.IPresentationPlaybackController#gotoNextSlide</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoPreviousSlide">ispring.presenter.player.IPresentationPlaybackController#gotoPreviousSlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoLastSlideViewed"><span class="type-signature"></span>gotoLastSlideViewed<span class="signature">(autoStart<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Switches to the last slide viewed.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autoStart</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to start slide playback automatically, <code>true</code> by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoNextSlide"><span class="type-signature"></span>gotoNextSlide<span class="signature">(autoStart<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Switches to the next slide taking hidden slides and custom slide shows into account.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autoStart</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to start slide playback automatically, <code>true</code> by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#nextSlideIndex">ispring.presenter.player.IPresentationPlaybackController#nextSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoPreviousSlide">ispring.presenter.player.IPresentationPlaybackController#gotoPreviousSlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             If the current slide index is not defined.
+        </span>
+   </dl>
+</dt>
+
+
+
+        
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoNextStep"><span class="type-signature"></span>gotoNextStep<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Starts playback from the next animation step of the presentation.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoPreviousStep">ispring.presenter.player.IPresentationPlaybackController#gotoPreviousStep</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoPreviousSlide"><span class="type-signature"></span>gotoPreviousSlide<span class="signature">(autoStart<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Switches to the previous slide taking hidden slides and custom slide shows into account.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autoStart</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to start slide playback automatically, <code>true</code> by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             If the current slide index is not defined.
+        </span>
+   </dl>
+</dt>
+
+
+
+        
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoPreviousStep"><span class="type-signature"></span>gotoPreviousStep<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Moves one animation step back and pauses.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoNextStep">ispring.presenter.player.IPresentationPlaybackController#gotoNextStep</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoSlide"><span class="type-signature"></span>gotoSlide<span class="signature">(slideIndex, autoStart<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Switches to the specified slide of the presentation.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>slideIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A slide index to switch to</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>autoStart</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to start slide playback automatically, <code>true</code> by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="gotoTimestamp"><span class="type-signature"></span>gotoTimestamp<span class="signature">(slideIndex, stepIndex, timeOffset, autoStart<span class="signature-attributes"> opt</span>)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Moves to the specified position within the presentation.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>slideIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The target slide index.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>stepIndex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The target animation step index within the target slide.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timeOffset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Time offset from the beginning of the target animation step, in seconds.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>autoStart</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Indicates whether to start playback automatically, <code>false</code> by defaul.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="lastSlideIndex"><span class="type-signature"></span>lastSlideIndex<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the presentation last slide index taking hidden slides and custom slide shows into account.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlideIndex">ispring.presenter.player.IPresentationPlaybackController#currentSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#firstSlideIndex">ispring.presenter.player.IPresentationPlaybackController#firstSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#nextSlideIndex">ispring.presenter.player.IPresentationPlaybackController#nextSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#previousSlideIndex">ispring.presenter.player.IPresentationPlaybackController#previousSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoLastSlide">ispring.presenter.player.IPresentationPlaybackController#gotoLastSlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="nextSlideIndex"><span class="type-signature"></span>nextSlideIndex<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the next slide index taking hidden slides, custom slide shows, and slide branching settingsinto account.<p><code>-1</code> is returned if the next slide is not available, for example,if the current slide is the last slide of the presentation, or if the current slide is not defined(the return value of the <a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlideIndex"><code>currentSlideIndex()</code></a>method is <code>-1</code>).</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlideIndex">ispring.presenter.player.IPresentationPlaybackController#currentSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#firstSlideIndex">ispring.presenter.player.IPresentationPlaybackController#firstSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#lastSlideIndex">ispring.presenter.player.IPresentationPlaybackController#lastSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#previousSlideIndex">ispring.presenter.player.IPresentationPlaybackController#previousSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoNextSlide">ispring.presenter.player.IPresentationPlaybackController#gotoNextSlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="pause"><span class="type-signature"></span>pause<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Suspends the presentation playback.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#play">ispring.presenter.player.IPresentationPlaybackController#play</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="play"><span class="type-signature"></span>play<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Resumes the presentation playback.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#pause">ispring.presenter.player.IPresentationPlaybackController#pause</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="playbackCompleteEvent"><span class="type-signature"></span>playbackCompleteEvent<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.events.EventDispatcher.html">ispring.events.EventDispatcher</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>playbackComplete</code>event when the presentation playback is complete.<p>The returned event dispatcher invokes the listener function without any parameters. See the following example:</p><pre>    var presentationController;    // ...    presentationController.playbackCompleteEvent().addHandler(function(){        window.console.log("Presentation playback has been completed.");    });</pre>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>playbackComplete</code> event when the presentation playback is complete.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.events.EventDispatcher.html">ispring.events.EventDispatcher</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="playbackState"><span class="type-signature"></span>playbackState<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the current playback state of the presentation.<p>The <a href="ispring.presenter.player.html#PresentationPlaybackState"><code>ispring.presenter.player.PresentationPlaybackState</code></a> object properties define the possible valuesof the <code>playbackState()</code> method.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.html#PresentationPlaybackState">ispring.presenter.player.PresentationPlaybackState</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">string</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="previousSlideIndex"><span class="type-signature"></span>previousSlideIndex<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the previous slide index taking hidden slides, custom slide shows, and slide branching settingsinto account.<p><code>-1</code> is returned if the previous slide is not available, for example,if the current slide is the first slide of the presentation, or if the current slide is not defined(the return value of the <a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlideIndex"><code>currentSlideIndex</code></a>method is <code>-1</code>).</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlideIndex">ispring.presenter.player.IPresentationPlaybackController#currentSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#firstSlideIndex">ispring.presenter.player.IPresentationPlaybackController#firstSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#lastSlideIndex">ispring.presenter.player.IPresentationPlaybackController#lastSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#nextSlideIndex">ispring.presenter.player.IPresentationPlaybackController#nextSlideIndex</a></li>
+        
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoPreviousSlide">ispring.presenter.player.IPresentationPlaybackController#gotoPreviousSlide</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type">number</span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="slideChangeEvent"><span class="type-signature"></span>slideChangeEvent<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>slideChange</code>event when the current slide changes.<p>The returned event dispatcher passes a new slide index to the listener function. See the following example.</p><pre>    var presentationController;    // ...    presentationController.slideChangeEvent().addHandler(function(slideIndex){        window.console.log("Current slide has been changed: " + slideIndex);    });</pre>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.IPresentationPlaybackController.html#currentSlideIndex">ispring.presenter.player.IPresentationPlaybackController#currentSlideIndex</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>slideChange</code> event when the current slide changes.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="slideTransitionController"><span class="type-signature"></span>slideTransitionController<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.player.transitions.ISlideTransitionController.html">ispring.presenter.player.transitions.ISlideTransitionController</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.presenter.player.transitions.ISlideTransitionController.html"><code>ISlideTransitionController</code></a> interfaceproviding information about the slide transition state.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.presenter.player.transitions.ISlideTransitionController.html">ispring.presenter.player.transitions.ISlideTransitionController</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="stepChangeEvent"><span class="type-signature"></span>stepChangeEvent<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>stepChange</code>event when the current animation step changes.<p>The returned event dispatcher passes a new step index to the listener function. See the following example.</p><pre>    var presentationController;    // ...    presentationController.stepChangeEvent().addHandler(function(stepIndex){        window.console.log("Current step has been changed: " + stepIndex);    });</pre>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.ITimestamp.html#stepIndex">ispring.presenter.presentation.ITimestamp#stepIndex</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    The <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>stepChange</code> event when the current animation step changes.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type: 
+<span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
+
+
+    </dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br clear="both">
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
