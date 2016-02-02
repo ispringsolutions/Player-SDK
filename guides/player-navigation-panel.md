@@ -1,13 +1,13 @@
-# Suite DX tutorial for Web-Developers
+# iSpring Player SDK tutorial
 
-## 1. Prepare Workspace
+## 1. Presentation embedding with iframe
 
 Things we do to prepare was described in the [Intro Tutorial](player-sdk-intro.md)
 
-- create `index.html` and directory `presentation`
-- convert your presentation
-- copy converted content into `presentation` directory
-- put the following code to `index.html`:
+- Create an empty `index.html` and a directory named `presentation`
+- Convert your presentation
+- Copy the converted files to the `presentation` directory
+- Add the following HTML code to `index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ Things we do to prepare was described in the [Intro Tutorial](player-sdk-intro.m
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-    <title>Insert your title here</title>
+    <title>Insert a web page title here</title>
     <style>
         #presentation {
             width: 864px;
@@ -33,18 +33,22 @@ Things we do to prepare was described in the [Intro Tutorial](player-sdk-intro.m
 
         ispringPresentationConnector.register = function(player)
         {
-            // TODO: add navigation panel
+            // This function will be invoked by the presentation when the player is initialized
         };
     </script>
   </body>
 </html>
 ```
 
-## 2. Next/Prev buttons
+When you open the `index.html`, you will see the published presentation embedded in your web page as an iframe.
 
+
+## 2. Add previous and next slide navigation buttons
+
+Now we are ready to add buttons that will make the player
 Now we can add two buttons to control navigation.
 
-#### New CSS
+#### CSS
 
 ```css
 #button-prev, #button-next {
@@ -54,7 +58,8 @@ Now we can add two buttons to control navigation.
     height: 35px;
 }
 ```
-#### New HTML
+#### HTML
+Add the following HTML code just below the <iframe> tag
 ```html
 <div class="clear"> </div>
 <div>
@@ -62,7 +67,7 @@ Now we can add two buttons to control navigation.
   <button id="button-next">Next</button>
 </div>
 ```
-#### Whole Javascript
+#### Replace the <script> tag content with the following code:
 ```js
 var ispringPresentationConnector = {};
 
