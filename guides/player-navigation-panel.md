@@ -67,7 +67,7 @@ Add the following HTML code just below the &lt;iframe&gt; tag
   <button id="button-next">Next</button>
 </div>
 ```
-#### Replace the <script> tag content with the following code:
+#### Replace the &lt;script&gt; tag content with the following code:
 ```js
 var ispringPresentationConnector = {};
 
