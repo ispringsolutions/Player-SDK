@@ -2,7 +2,7 @@
 
 ## 1. Presentation embedding with iframe
 
-Things we do to prepare was described in the [Intro Tutorial](player-sdk-intro.md)
+Before you start, please read the [Player SDK Introduction](player-sdk-intro.md) article
 
 - Create an empty `index.html` and a directory named `presentation`
 - Convert your presentation
