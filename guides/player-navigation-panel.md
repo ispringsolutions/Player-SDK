@@ -43,13 +43,13 @@ Before you start, please read the [Player SDK Introduction](player-sdk-intro.md)
 When you open the `index.html`, you will see the published presentation embedded in your web page as an iframe.
 
 
-## 2. Add previous and next slide navigation buttons
+## 2. Adding previous and next slide navigation buttons
 
 Now we are ready to add buttons that will make the player
 Now we can add two buttons to control navigation.
 
 #### CSS
-
+Append the following styles in the end of the &lt;style&gt; tag:
 ```css
 #button-prev, #button-next {
     float: left;
@@ -59,7 +59,7 @@ Now we can add two buttons to control navigation.
 }
 ```
 #### HTML
-Add the following HTML code just below the &lt;iframe&gt; tag
+Add the following HTML code just below the &lt;iframe&gt; tag:
 ```html
 <div class="clear"> </div>
 <div>
@@ -67,7 +67,8 @@ Add the following HTML code just below the &lt;iframe&gt; tag
   <button id="button-next">Next</button>
 </div>
 ```
-#### Replace the &lt;script&gt; tag content with the following code:
+#### JavaScript
+Replace the &lt;script&gt; tag content with the following JavaScript code:
 ```js
 var ispringPresentationConnector = {};
 
@@ -89,13 +90,14 @@ function initPlaybackControls(playbackController) {
 }
 ```
 
-## 3. Current Slide Indicator
+## 3. Adding Current Slide Indicator
 
-Let's add indicator with current slide number between Next and Prev buttons:
+Let's add indicator with the current slide number between the Next and the Previous buttons:
 
 ![](images/player-nav-panel.png)
 
-#### Changes in HTML
+#### HTML
+Insert a new DIV between &lt;button&gt; elements:
 
 ```diff
 <body>
@@ -108,7 +110,7 @@ Let's add indicator with current slide number between Next and Prev buttons:
   </div>
 </body>
 ```
-#### Customizing with CSS
+#### CSS
 ```css
 #slide-counter {
     float: left;
@@ -125,7 +127,8 @@ Let's add indicator with current slide number between Next and Prev buttons:
     width: 100%;
 }
 ```
-#### Changes in Javascript
+#### JavaScript
+Add the `slideChangeEvent` handler to the presentation playback controller.
 ```diff
 var ispringPresentationConnector = {};
 
