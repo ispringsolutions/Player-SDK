@@ -59,7 +59,7 @@ Now we can add two buttons to control navigation.
 }
 ```
 #### HTML
-Add the following HTML code just below the <iframe> tag
+Add the following HTML code just below the &lt;iframe&gt; tag
 ```html
 <div class="clear"> </div>
 <div>
