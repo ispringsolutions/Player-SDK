@@ -92,6 +92,14 @@
         slidesCount = presentation.slides().count();
         playbackController = player.view().playbackController();
 
+        // Uncomment the following lines of code to start the presentation from a different slide
+        /*
+        player.startupEvent().addHandler(function(startup){
+            startup.setAction("gotoSlide");
+            startup.setSlideIndex(3); // start playback from slide 3
+        }, 1);
+        */
+
         changePlayPauseBtnState(presentation.settings().playback().autoStart());
         initPlaybackControllerEventsHandlers();
         initButtonsEventsHandlers();
