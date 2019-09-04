@@ -2,7 +2,7 @@
 
 ### 1. HTML page
 
-Let's create simpliest HTML page placeholder, and save it as "index.html"
+Let's create simplest HTML page placeholder, and save it as "index.html"
 
 ```html
 <!DOCTYPE html>
@@ -22,28 +22,29 @@ Let's create simpliest HTML page placeholder, and save it as "index.html"
 ### 2. Publish Presentation
 
 Now, let's convert our presentation using [iSpring Suite DX](http://www.ispringsolutions.com/ispring-suitedx).
-For this tutorial, we will use
+For this tutorial, we will select the following output options:
 
-- Combined (Flash+HTML5) conversion mode
-- "None" player that means "player with no skin"
+- HTML5 output format
+- "None (Slide Only)" when only the course slides are displayed
+- JavaScript API is always enabled and will be available after publishing.
 
 ![iSpring Suite DX Publish Dialog, General tab](images/publish-general.png)
 
-- Check that option "Enable presentation control API" turned on at "Advanced" tab
-- You can choose custom presentation container size, e.g. 864x540 pixels
+- Here you can choose the size of the presentation container. By default, it is scaled to 75% of the original slide size.
 
 ![iSpring Suite DX Publish Dialog, Advanced tab](images/publish-advanced.png)
 
 
-Let's publish! After that
-- create directory "presentation" along with your "index.html" file
-- copy converted presentation into this folder
+Now it's time to go ahead and click Publish.
+Once your presentation is published, please do the following:
+- Create a new directory called "presentation" in the same location with your "index.html" file
+- Copy converted presentation and its data into the "presentation" folder.
 
 ![presentation copying](images/presentation-folder-content.png)
 
 ### 3. Embed Presentation
 
-Now, we should embed presentation into ```<iframe>``` tag.
+The easiest way to embed your presentation is to insert it in the ```<iframe>```.
 ```diff
 <!DOCTYPE html>
 <html>
@@ -72,8 +73,8 @@ Now, we should embed presentation into ```<iframe>``` tag.
 
 ### 4. Connect to Player
 
-- add new textfield which will be changed on presentation player start
-- add javascript code below to animate it
+- Add a new text field which will be changed on presentation player start
+- Add the javascript code below to animate it.
 
 ```diff
 <!DOCTYPE html>
@@ -109,7 +110,7 @@ Now, we should embed presentation into ```<iframe>``` tag.
 +            var indicator = document.getElementById("state-indicator");
 +            indicator.innerHTML = "Presentation is running";
 +        };
-    </script>
++    </script>
   </body>
 </html>
 ```
