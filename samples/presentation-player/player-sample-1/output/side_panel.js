@@ -41,7 +41,7 @@ window.SidePanel = function(slides, playbackController)
 function createSlideItem(thumbnailPath, text) {
 	var item = document.createElement("div");
 	item.className = "item";
-	item.innerHTML = text;
+	item.innerText = text;
 
 	var thumbnail = document.createElement("div");
 	thumbnail.className = "thumbnail";

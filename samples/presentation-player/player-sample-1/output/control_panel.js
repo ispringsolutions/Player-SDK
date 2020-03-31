@@ -48,7 +48,7 @@ window.ControlPanel = function(playbackController, slides, soundController, disp
 
 	var slidesLabel = document.getElementById("slideLabel");
 	playbackController.slideChangeEvent().addHandler(function() {
-		slidesLabel.innerHTML = "Slide: " + (playbackController.currentSlideIndex() + 1) + " / " + (playbackController.lastSlideIndex() + 1);
+		slidesLabel.innerText = "Slide: " + (playbackController.currentSlideIndex() + 1) + " / " + (playbackController.lastSlideIndex() + 1);
 	});
 
 	var progressLine = document.getElementById("progress");
@@ -65,7 +65,7 @@ window.ControlPanel = function(playbackController, slides, soundController, disp
 			var slideStartTimestamp = slides.createTimestamp(slide.index(), 0, 0);
 			var slideStartTime = slides.convertTimestampToTime(slideStartTimestamp, false, false);
 
-			timeLabel.innerHTML = formatTime(currentPresentationTime - slideStartTime) + " / " + formatTime(slideDuration);
+			timeLabel.innerText = formatTime(currentPresentationTime - slideStartTime) + " / " + formatTime(slideDuration);
 
 			var slideProgress = (slideDuration > 0) ? ((currentPresentationTime - slideStartTime) / slideDuration) : 0;
 			progressLine.style.width = Math.round(slideProgress * 100) + "%";

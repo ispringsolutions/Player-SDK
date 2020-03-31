@@ -26,7 +26,7 @@ window.initializeSkin = function(player)
 
 	// Append player view to content div
 	var contentView = document.getElementById("content");
-	setStyleSize(contentView, presentation.slideWidth(), presentation.slideHeight());
+	setElementSize(contentView, presentation.slideWidth(), presentation.slideHeight());
 	contentView.appendChild(playerView.displayObject());
 
 	// Initialize slide list
@@ -47,7 +47,7 @@ window.initializeSkin = function(player)
 		window.onresize = function() {
 			var left = calculateCenteredPos(document.documentElement.clientWidth, playerWidth);
 			var top = calculateCenteredPos(document.documentElement.clientHeight, playerHeight);
-			setStylePos(playerDiv, left, top);
+			setElementPos(playerDiv, left, top);
 		};
 	}
 	else
@@ -69,7 +69,7 @@ window.initializeSkin = function(player)
 			var top = calculateCenteredPos(document.documentElement.clientHeight, scaledHeight);
 			var scaledWidth = Math.round(playerWidth * scale);
 			displayProperties.leftPosition = calculateCenteredPos(document.documentElement.clientWidth, scaledWidth);
-			setStylePos(playerDiv, displayProperties.leftPosition, top);
+			setElementPos(playerDiv, displayProperties.leftPosition, top);
 		};
 	}
 	window.onresize();
@@ -124,7 +124,7 @@ function initializeNarrationView(narrationView, videoTracks)
 function initializePlayerDiv(playerWidth, playerHeight, sidePanelAtLeft)
 {
 	var /** HTMLElement */ playerDiv = document.getElementById("player");
-	setStyleSize(playerDiv, playerWidth, playerHeight);
+	setElementSize(playerDiv, playerWidth, playerHeight);
 	playerDiv.className = sidePanelAtLeft ? "sidePanelAtLeft" : "sidePanelAtRight";
 	return playerDiv;
 }
@@ -135,7 +135,7 @@ function initializePlayerDiv(playerWidth, playerHeight, sidePanelAtLeft)
 function initializeTitle(title)
 {
 	var titlePanel = document.getElementById("titlePanel");
-	titlePanel.innerHTML = title;
+	titlePanel.innerText = title;
 }
 
 /**
@@ -161,7 +161,7 @@ function makePx(n) {
  * @param {number} x
  * @param {number} y
  */
-function setStylePos(element, x, y)
+function setElementPos(element, x, y)
 {
 	element.style.left = makePx(x);
 	element.style.top = makePx(y);
@@ -172,7 +172,7 @@ function setStylePos(element, x, y)
  * @param {number} w
  * @param {number} h
  */
-function setStyleSize(element, w, h)
+function setElementSize(element, w, h)
 {
 	element.style.width = makePx(w);
 	element.style.height = makePx(h);
