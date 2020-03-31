@@ -8,17 +8,6 @@
 		<commonSettings>
 			<t:i18n src="common_messages.lng"/>
 		</commonSettings>
-		<flash>
-			<settings>
-				<t:skin src="flash_skin_settings.xml"/>
-				<t:publishing src="flash_publishing_settings.xml"/>
-			</settings>
-			<module id="SampleFlash" requiredFlashVersion="101" src="sample_skin.swc" skinFactoryClass="sampleSkin.SamplePlaybackSkinFactory">
-				<features>
-					<videoNarration>true</videoNarration>
-				</features>
-			</module>
-		</flash>
 		<html5>
 			<settings>
 				<t:skin src="html_skin_settings.js"/>

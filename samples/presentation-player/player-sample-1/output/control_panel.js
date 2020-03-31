@@ -1,4 +1,11 @@
-ControlPanel = function(playbackController, slides, soundController)
+(function() {
+/**
+ * @param {!ispring.presenter.player.IPresentationPlaybackController} playbackController
+ * @param {!ispring.presenter.presentation.slides.ISlides} slides
+ * @param {!ispring.presenter.player.sound.ISoundController} soundController
+ * @param {{ leftPosition: number, scale: number }} displayProperties
+ */
+window.ControlPanel = function(playbackController, slides, soundController, displayProperties)
 {
 	var clock = playbackController.clock();
 
@@ -26,59 +33,23 @@ ControlPanel = function(playbackController, slides, soundController)
 		playbackController.gotoPreviousSlide();
 	};
 
-	playbackController.slideChangeEvent().addHandler(function() {
-		if (playbackController.currentSlideIndex() == playbackController.firstSlideIndex())
-		{
-			prevButton.setAttribute("disabled", "");
-		}
-		else
-		{
-			prevButton.removeAttribute("disabled");
-		}
-	});
-
 	var nextButton = document.getElementById("next");
 	nextButton.onclick = function() {
 		playbackController.gotoNextSlide();
 	};
 
 	playbackController.slideChangeEvent().addHandler(function() {
-		if (playbackController.currentSlideIndex() == playbackController.lastSlideIndex())
-		{
-			nextButton.setAttribute("disabled", "");
-		}
-		else
-		{
-			nextButton.removeAttribute("disabled");
-		}
+		var currentSlideIndex = playbackController.currentSlideIndex()
+		enableControl(prevButton, currentSlideIndex != playbackController.firstSlideIndex());
+		enableControl(nextButton, currentSlideIndex != playbackController.lastSlideIndex());
 	});
 
 	/* ==================== progress bar ===========================*/
 
 	var slidesLabel = document.getElementById("slideLabel");
 	playbackController.slideChangeEvent().addHandler(function() {
-		slidesLabel.innerHTML = "Slide: " + (playbackController.currentSlideIndex() + 1) + " / " + (playbackController.lastSlideIndex() + 1);
+		slidesLabel.innerText = "Slide: " + (playbackController.currentSlideIndex() + 1) + " / " + (playbackController.lastSlideIndex() + 1);
 	});
-
-	function formatNumber(num)
-	{
-		var str = num.toString();
-		if (str.length == 1)
-		{
-			str = "0" + str;
-		}
-
-		return str;
-	}
-
-	function formatTime(seconds)
-	{
-		seconds = Math.round(seconds);
-		var minutes = Math.floor(seconds / 60);
-		seconds = seconds % 60;
-
-		return formatNumber(minutes) + ":" + formatNumber(seconds);
-	}
 
 	var progressLine = document.getElementById("progress");
 	var timeLabel = document.getElementById("timeLabel");
@@ -94,7 +65,7 @@ ControlPanel = function(playbackController, slides, soundController)
 			var slideStartTimestamp = slides.createTimestamp(slide.index(), 0, 0);
 			var slideStartTime = slides.convertTimestampToTime(slideStartTimestamp, false, false);
 
-			timeLabel.innerHTML = formatTime(currentPresentationTime - slideStartTime) + " / " + formatTime(slideDuration);
+			timeLabel.innerText = formatTime(currentPresentationTime - slideStartTime) + " / " + formatTime(slideDuration);
 
 			var slideProgress = (slideDuration > 0) ? ((currentPresentationTime - slideStartTime) / slideDuration) : 0;
 			progressLine.style.width = Math.round(slideProgress * 100) + "%";
@@ -126,7 +97,7 @@ ControlPanel = function(playbackController, slides, soundController)
 	}
 
 	function seek(event) {
-		var progress = ((event.clientX - window.leftPosition) / window.scale - getProgressBarOffset() + window.leftPosition) / progressBar.clientWidth;
+		var progress = ((event.clientX - displayProperties.leftPosition) / displayProperties.scale - getProgressBarOffset() + displayProperties.leftPosition) / progressBar.clientWidth;
 		progress = Math.max(0, Math.min(1, progress));
 
 		var currentSlide = playbackController.currentSlide();
@@ -159,8 +130,6 @@ ControlPanel = function(playbackController, slides, soundController)
 		soundController.mute(!soundController.muted());
 	};
 
-
-	var volumeControl = document.getElementById("volumeControl");
 	var volumeThumb = document.getElementById("volumeThumb");
 
 	function updateVolumeThumbPosition()
@@ -181,6 +150,7 @@ ControlPanel = function(playbackController, slides, soundController)
 		}
 	}
 
+	var volumeControl = document.getElementById("volumeControl");
 	function getVolumeControlOffset() {
 		var element = volumeControl;
 		var currentLeft = 0;
@@ -194,7 +164,7 @@ ControlPanel = function(playbackController, slides, soundController)
 	}
 
 	function updateVolume(event) {
-		var volume = ((event.clientX - window.leftPosition) / window.scale - getVolumeControlOffset() + window.leftPosition) / volumeControl.clientWidth;
+		var volume = ((event.clientX - displayProperties.leftPosition) / displayProperties.scale - getVolumeControlOffset() + displayProperties.leftPosition) / volumeControl.clientWidth;
 		volume = Math.max(0, Math.min(1, volume));
 
 		soundController.setVolume(volume);
@@ -208,13 +178,48 @@ ControlPanel = function(playbackController, slides, soundController)
 	volumeControl.addEventListener("mousedown", volumeChangeStarted);
 
 	soundController.muteStateToggledEvent().addHandler(function() {
-		if (soundController.muted())
-		{
-			volumeControl.setAttribute("disabled", "");
-		}
-		else
-		{
-			volumeControl.removeAttribute("disabled");
-		}
+		enableControl(volumeControl, !soundController.muted());
 	});
 };
+
+/**
+ * @param {!Element} ctrl
+ * @param {boolean} enabled
+ */
+function enableControl(ctrl, enabled) {
+	if (enabled)
+	{
+		ctrl.removeAttribute("disabled");
+	}
+	else
+	{
+		ctrl.setAttribute("disabled", "");
+	}
+}
+
+/**
+ * @param {!number} num
+ * @return {!string}
+ */
+function formatNumber(num) {
+	var str = num.toString();
+	if (str.length == 1)
+	{
+		str = "0" + str;
+	}
+
+	return str;
+}
+
+/**
+ * @param {number} seconds
+ * @return {string}
+ */
+function formatTime(seconds) {
+	seconds = Math.round(seconds);
+	var minutes = Math.floor(seconds / 60);
+	seconds = seconds % 60;
+
+	return formatNumber(minutes) + ":" + formatNumber(seconds);
+}
+})();

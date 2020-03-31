@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Presentation Control sample</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="style/presentation_control.css">
+</head>
+<body>
+<iframe id="frame" src="presentation/index.html"></iframe>
+
+<button id="prev">&lt;&lt;</button>
+<button id="play_pause"></button>
+<button id="next">&gt;&gt;</button>
+
+<p id="time"></p>
+<p id="slideIndex"></p>
+
+<script>
+    var PLAY = "Play";
+    var PAUSE = "Pause";
+
+    var ispringPresentationConnector = {};
+    var playbackController = null;
+
+    var prevBtn = document.getElementById("prev");
+    var playPauseBtn = document.getElementById("play_pause");
+    var nextBtn = document.getElementById("next");
+
+    var timeLabel = document.getElementById("time");
+    var slideIndexLabel = document.getElementById("slideIndex");
+
+    var slidesCount = 0;
+    var isPlayedPresentation = false;
+
+    ispringPresentationConnector.register = function(player)
+    {
+        var presentation = player.presentation();
+        slidesCount = presentation.slides().count();
+        playbackController = player.view().playbackController();
+
+        changePlayPauseBtnState(presentation.settings().playback().autoStart());
+        initPlaybackControllerEventsHandlers();
+        initButtonsEventsHandlers();
+    };
+
+    function changePlayPauseBtnState(isPlayed)
+    {
+        if (isPlayedPresentation == isPlayed)
+        {
+            return;
+        }
+
+        isPlayedPresentation = isPlayed;
+        playPauseBtn.innerHTML = (isPlayedPresentation) ? PAUSE : PLAY;
+    }
+
+    function initPlaybackControllerEventsHandlers()
+    {
+        playbackController.slideChangeEvent().addHandler(function(slideIndex) {
+            slideIndexLabel.innerHTML = "Slide: " + (slideIndex + 1) + " of " + slidesCount;
+        });
+
+        playbackController.clock().tickEvent().addHandler(function(clock) {
+            var timeOffset = clock.timestamp().timeOffset();
+            var minutes = Math.floor(timeOffset / 60);
+            var seconds = Math.round(timeOffset % 60);
+
+            timeLabel.innerHTML = (minutes < 10) ? "0" + minutes : minutes;
+            timeLabel.innerHTML += ":";
+            timeLabel.innerHTML += (seconds < 10) ? "0" + seconds : seconds;
+        });
+    }
+
+    function initButtonsEventsHandlers()
+    {
+        prevBtn.onclick = function() {
+            playbackController.gotoPreviousSlide();
+            changePlayPauseBtnState(true);
+        };
+
+        playPauseBtn.onclick = function() {
+            if (isPlayedPresentation)
+            {
+                playPauseBtn.innerHTML = PLAY;
+                playbackController.pause();
+            }
+            else
+            {
+                playPauseBtn.innerHTML = PAUSE;
+                playbackController.play();
+            }
+            isPlayedPresentation = !isPlayedPresentation;
+        };
+
+        nextBtn.onclick = function() {
+            playbackController.gotoNextSlide();
+            changePlayPauseBtnState(true);
+        };
+    }
+</script>
+</body>
+</html>
