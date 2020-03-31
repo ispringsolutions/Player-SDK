@@ -37,6 +37,7 @@
 					<submodule src="next_icon.png" target="data/next_icon.png"/>
 					<submodule src="mute_icon.png" target="data/mute_icon.png"/>
 					<submodule src="volume_icon.png" target="data/volume_icon.png"/>
+					<submodule src="styles.css" target="data/styles.css"/>
 				</submodules>
 			</module>
 		</html5>

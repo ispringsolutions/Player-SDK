@@ -1,32 +1,27 @@
-SidePanel = function(presentation, playbackController)
+(function() {
+/**
+ * @param {!ispring.presenter.presentation.slides.ISlides} slides
+ * @param {!ispring.presenter.player.IPresentationPlaybackController} playbackController
+ */
+window.SidePanel = function(slides, playbackController)
 {
 	var sidePanelView = document.getElementById("sidePanel");
 
 	var items = [];
 
-	function addItem(index, thumbnailPath, text) {
-		var item = document.createElement("div");
-		item.className = "item";
-		item.innerHTML = (index + 1) + ". " + text;
-
-		var thumbnail = document.createElement("div");
-		thumbnail.className = "thumbnail";
-		thumbnail.style.background = "url(" + thumbnailPath + ") no-repeat center";
-		item.appendChild(thumbnail);
-
-		sidePanelView.appendChild(item);
-
-		item.onclick = function() {
+	function addSlide(index) {
+		var slide = slides.getSlide(index);
+		var slideItem = createSlideItem(slide.thumbnail().url(), (index + 1) + ". " + slide.title());
+		slideItem.onclick = function() {
 			playbackController.gotoSlide(index);
 		};
-
-		items.push(item);
+		sidePanelView.appendChild(slideItem);
+		items.push(slideItem);
 	}
 
-	for (var i = 0; i < presentation.slides().count(); ++i)
+	for (var i = 0; i < slides.count(); ++i)
 	{
-		var slide = presentation.slides().getSlide(i);
-		addItem(i, slide.thumbnail().url(), slide.title());
+		addSlide(i);
 	}
 
 	playbackController.slideChangeEvent().addHandler(function() {
@@ -37,3 +32,21 @@ SidePanel = function(presentation, playbackController)
 		}
 	})
 };
+
+/**
+ * @param {!string} thumbnailPath
+ * @param {!string} text
+ * @return {!Element}
+ */
+function createSlideItem(thumbnailPath, text) {
+	var item = document.createElement("div");
+	item.className = "item";
+	item.innerHTML = text;
+
+	var thumbnail = document.createElement("div");
+	thumbnail.className = "thumbnail";
+	thumbnail.style.background = "url(" + thumbnailPath + ") no-repeat center";
+	item.appendChild(thumbnail);
+	return item;
+}
+})();

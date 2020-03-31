@@ -1,45 +1,94 @@
-SampleSkin = function(player)
+(function() {
+/**
+ * @param {!ispring.presenter.player.IPresentationPlayer} player
+ */
+window.initializeSkin = function(player)
 {
-	var presentationView = player.view();
-	var playbackController = player.view().restrictedPlaybackController();
-	var soundController = player.view().soundController();
+	var SLIDE_POS_X = 280;
+	var SLIDE_POS_Y = 110;
+
+	var displayProperties = {
+		leftPosition: 0,
+		scale: 1,
+	};
+
 	var presentation = player.presentation();
+
+	var playerWidth = presentation.slideWidth() + SLIDE_POS_X;
+	var playerHeight = presentation.slideHeight() + SLIDE_POS_Y;
+
 	var skinSettings = presentation.settings().skin();
+	var playerDiv = initializePlayerDiv(playerWidth, playerHeight, skinSettings.sidePanelSettings.sidePanelAtLeft);
 
-	var playerWidth = presentation.slideWidth() + 280;
-	var playerHeight = presentation.slideHeight() + 110;
+	initializeTitle(presentation.title());
 
-	var playerView = document.getElementById("player");
-	playerView.style.width = playerWidth + "px";
-	playerView.style.height = playerHeight + "px";
+	var playerView = player.view();
 
-	if (skinSettings.sidePanelSettings.sidePanelAtLeft)
+	// Append player view to content div
+	var contentView = document.getElementById("content");
+	setStyleSize(contentView, presentation.slideWidth(), presentation.slideHeight());
+	contentView.appendChild(playerView.displayObject());
+
+	// Initialize slide list
+	var playbackController = playerView.restrictedPlaybackController();
+	new SidePanel(presentation.slides(), playbackController);
+
+	// Initialize Control panel (progress bar, volume bar, control buttons)
+	new ControlPanel(playbackController, presentation.slides(), playerView.soundController(), displayProperties);
+
+	// Initialize view for video narration
+	var narrationViewElement = initializeNarrationView(player.videoNarrationController().view(), presentation.narration().videoTracks());
+	playerDiv.appendChild(narrationViewElement);
+
+	if (!presentation.settings().appearance().fitToWindow())
 	{
-		playerView.className = "sidePanelAtLeft";
+		// move to window center on resize
+		document.body.style.overflow = "auto";
+		window.onresize = function() {
+			var left = calculateCenteredPos(document.documentElement.clientWidth, playerWidth);
+			var top = calculateCenteredPos(document.documentElement.clientHeight, playerHeight);
+			setStylePos(playerDiv, left, top);
+		};
 	}
 	else
 	{
-		playerView.className = "sidePanelAtRight";
+		document.body.style.overflow = "hidden";
+		playerDiv.style.webkitTransformOrigin = "0 0";
+		playerDiv.style.msTransformOrigin = "0 0";
+		playerDiv.style.transformOrigin = "0 0";
+
+		// scale player after window
+		window.onresize = function() {
+			var scale = Math.min(document.documentElement.clientWidth / playerWidth, document.documentElement.clientHeight / playerHeight);
+			displayProperties.scale = scale;
+			playerDiv.style.webkitTransform = "scale(" + scale + ")";
+			playerDiv.style.msTransform = "scale(" + scale + ")";
+			playerDiv.style.transform = "scale(" + scale + ")";
+
+			var scaledHeight = Math.round(playerHeight * scale);
+			var top = calculateCenteredPos(document.documentElement.clientHeight, scaledHeight);
+			var scaledWidth = Math.round(playerWidth * scale);
+			displayProperties.leftPosition = calculateCenteredPos(document.documentElement.clientWidth, scaledWidth);
+			setStylePos(playerDiv, displayProperties.leftPosition, top);
+		};
 	}
+	window.onresize();
 
-	var titlePanel = document.getElementById("titlePanel");
-	titlePanel.innerHTML = presentation.title();
+	document.onselectstart = function() { return false; };
+}
 
-	new SidePanel(presentation, playbackController);
-
-	var contentView = document.getElementById("content");
-	contentView.appendChild(presentationView.displayObject());
-
-	new ControlPanel(playbackController, presentation.slides(), soundController);
-
-	var narrationView = player.videoNarrationController().view();
-	var narrationViewElement = narrationView.displayObject();
+/**
+ * @param {!ispring.presenter.player.narration.video.IVideoNarrationView} narrationView
+ * @param {!ispring.presenter.presentation.narration.VideoTracks} videoTracks
+ * @return {!Element}
+ */
+function initializeNarrationView(narrationView, videoTracks)
+{
+	var /** Element */ narrationViewElement = narrationView.displayObject();
 	narrationViewElement.style.display = "none";
 	narrationViewElement.id = "narrationView";
-	playerView.appendChild(narrationViewElement);
 
 	var NarrationTrackPlaybackState = ispring.presenter.presentation.narration.NarrationTrackPlaybackState;
-	var videoTracks = presentation.narration().videoTracks();
 	for (var i = 0; i < videoTracks.count(); ++i)
 	{
 		var videoTrack = videoTracks.getVideoTrack(i);
@@ -53,7 +102,7 @@ SampleSkin = function(player)
 				var videoHeight = videoWidth / track.width() * track.height();
 				narrationView.resize(videoWidth, videoHeight);
 
-				sidePanelView.style.top = (videoHeight + 50) + "px";
+				sidePanelView.style.top = makePx(videoHeight + 50);
 				narrationViewElement.style.display = "";
 			}
 			else if (track.playbackState() == NarrationTrackPlaybackState.DEACTIVATED)
@@ -63,44 +112,69 @@ SampleSkin = function(player)
 			}
 		}, this);
 	}
+	return narrationViewElement;
+}
 
-	window.leftPosition = 0;
-	window.scale = 1;
-	if (!presentation.settings().appearance().fitToWindow())
-	{
-		document.body.style.overflow = "auto";
-		window.onresize = function() {
-			var top = Math.max(0, Math.floor((document.documentElement.clientHeight - playerHeight) / 2));
-			playerView.style.top = top + "px";
+/**
+ * @param {number} playerWidth
+ * @param {number} playerHeight
+ * @param {boolean} sidePanelAtLeft
+ * @return {HTMLElement}
+ */
+function initializePlayerDiv(playerWidth, playerHeight, sidePanelAtLeft)
+{
+	var /** HTMLElement */ playerDiv = document.getElementById("player");
+	setStyleSize(playerDiv, playerWidth, playerHeight);
+	playerDiv.className = sidePanelAtLeft ? "sidePanelAtLeft" : "sidePanelAtRight";
+	return playerDiv;
+}
 
-			var left = Math.max(0, Math.floor((document.documentElement.clientWidth - playerWidth) / 2));
-			playerView.style.left = left + "px";
+/**
+ * @param {string} title
+ */
+function initializeTitle(title)
+{
+	var titlePanel = document.getElementById("titlePanel");
+	titlePanel.innerHTML = title;
+}
 
-		};
-	}
-	else
-	{
-		document.body.style.overflow = "hidden";
-		playerView.style.webkitTransformOrigin = "0 0";
-		playerView.style.msTransformOrigin = "0 0";
-		playerView.style.transformOrigin = "0 0";
+/**
+ * @param {number} outerSize
+ * @param {number} innerSize
+ * @return {number}
+ */
+function calculateCenteredPos(outerSize, innerSize)
+{
+	return Math.max(0, Math.floor((outerSize - innerSize) / 2));
+}
 
-		window.onresize = function() {
-			window.scale = Math.min(document.documentElement.clientWidth / playerWidth, document.documentElement.clientHeight / playerHeight);
-			playerView.style.webkitTransform = "scale(" + window.scale + ")";
-			playerView.style.msTransform = "scale(" + window.scale + ")";
-			playerView.style.transform = "scale(" + window.scale + ")";
+/**
+ * @param {number} n
+ * @return {string}
+ */
+function makePx(n) {
+	return n + "px";
+}
 
-			var scaledHeight = Math.round(playerHeight * scale);
-			var top = Math.max(0, Math.floor((document.documentElement.clientHeight - scaledHeight) / 2));
-			playerView.style.top = top + "px";
+/**
+ * @param {!HTMLElement} element
+ * @param {number} x
+ * @param {number} y
+ */
+function setStylePos(element, x, y)
+{
+	element.style.left = makePx(x);
+	element.style.top = makePx(y);
+}
 
-			var scaledWidth = Math.round(playerWidth * scale);
-			window.leftPosition = Math.max(0, Math.floor((document.documentElement.clientWidth - scaledWidth) / 2));
-			playerView.style.left = window.leftPosition + "px";
-		};
-	}
-	window.onresize();
-
-	document.onselectstart = function() { return false; }
-};
+/**
+ * @param {!HTMLElement} element
+ * @param {number} w
+ * @param {number} h
+ */
+function setStyleSize(element, w, h)
+{
+	element.style.width = makePx(w);
+	element.style.height = makePx(h);
+}
+})();
