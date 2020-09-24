@@ -26,7 +26,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.utils.assets.IAsset.html">IAsset</a></li><li><a href="ispring.utils.assets.IGraphicAsset.html">IGraphicAsset</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.utils.assets.IAsset.html">IAsset</a></li><li><a href="ispring.utils.assets.IGraphicAsset.html">IGraphicAsset</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.narration.html">ispring.presenter.player.narration</a></li><li><a href="ispring.presenter.player.narration.audio.html">ispring.presenter.player.narration.audio</a></li><li><a href="ispring.presenter.player.narration.video.html">ispring.presenter.player.narration.video</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.meta.html">ispring.presenter.presentation.meta</a></li><li><a href="ispring.presenter.presentation.narration.html">ispring.presenter.presentation.narration</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.settings.html">ispring.presenter.presentation.settings</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
 </nav>
 
 <div id="main">
@@ -61,7 +61,7 @@
 
     
     <div class="description">
-        The IGraphicAsset interface represents a graphic asset.
+        The <code>IGraphicAsset</code> interface represents a graphic asset.
     </div>
     
 
@@ -222,11 +222,18 @@
     
             
 
-    <div class="param-desc">
-    
-        Error Throws if the asset is not loaded.
-    
-    </div>
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             Throws if the asset is not loaded.
+        </span>
+   </dl>
+</dt>
+
 
 
         
@@ -238,12 +245,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">HTMLImageElement</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -324,11 +329,18 @@
     
             
 
-    <div class="param-desc">
-    
-        Error Throws if the asset is not loaded.
-    
-    </div>
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             Throws if the asset is not loaded.
+        </span>
+   </dl>
+</dt>
+
 
 
         
@@ -340,12 +352,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">HTMLCanvasElement</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -426,11 +436,18 @@
     
             
 
-    <div class="param-desc">
-    
-        Error Throws if the asset is not loaded.
-    
-    </div>
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             Throws if the asset is not loaded.
+        </span>
+   </dl>
+</dt>
+
 
 
         
@@ -442,12 +459,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -537,12 +552,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">boolean</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -636,7 +649,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>loadComplete</code>event when the asset has been loaded.<p>The returned event dispatcher passes the asset reference to the listener function. See the following example:</p><pre>    var asset;    // ...    asset.loadCompleteEvent().addHandler(function(theAsset){        window.console.log("The asset has been loaded successfully");    });    asset.load();</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>loadComplete</code>event when the asset has been loaded.<p>The returned event dispatcher passes the asset reference to the listener function. See the following example:</p><pre>	 var asset;	 // ...	 asset.loadCompleteEvent().addHandler(function(theAsset){		 window.console.log("The asset has been loaded successfully");	 });	 asset.load();</pre>
     </div>
     
 
@@ -702,12 +715,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -728,7 +739,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>loadFailed</code>event when the asset loading has failed.                                                                          N<p>The returned event dispatcher passes the asset reference to the listener function. See the following example:</p><pre>    var asset;    // ...    asset.loadFailedEvent().addHandler(function(theAsset){        window.console.log("The asset loading has failed:");    });    asset.load();</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>loadFailed</code>event when the asset loading has failed.																		   N<p>The returned event dispatcher passes the asset reference to the listener function. See the following example:</p><pre>	 var asset;	 // ...	 asset.loadFailedEvent().addHandler(function(theAsset){		 window.console.log("The asset loading has failed:");	 });	 asset.load();</pre>
     </div>
     
 
@@ -794,12 +805,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -820,7 +829,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>loadProgress</code>event when the asset loading progress is updated.<p>The returned event dispatcher passes the asset reference to the listener function. See the following example:</p><pre>    var asset;    // ...    asset.loadProgressEvent().addHandler(function(theAsset){        window.console.log("The asset loading progress is:", theAsset.progress());    });    asset.load();</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>loadProgress</code>event when the asset loading progress is updated.<p>The returned event dispatcher passes the asset reference to the listener function. See the following example:</p><pre>	 var asset;	 // ...	 asset.loadProgressEvent().addHandler(function(theAsset){		 window.console.log("The asset loading progress is:", theAsset.progress());	 });	 asset.load();</pre>
     </div>
     
 
@@ -886,12 +895,110 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
+</dt>
+</dl>
 
-    </dt>
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="path"><span class="type-signature"></span>path<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns the graphic asset path.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             Throws if the asset is not loaded.
+        </span>
+   </dl>
+</dt>
+
+
+
+        
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>Type: 
+<span class="param-type">string</span>
+
+</dt>
 </dl>
 
         
@@ -974,12 +1081,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -1133,11 +1238,18 @@
     
             
 
-    <div class="param-desc">
-    
-        Error Throws if the asset is not loaded.
-    
-    </div>
+<dt>
+    <dl>
+        
+<span class="param-type">Error</span>
+
+ -
+        <span class="param-desc reset-margin">
+             Throws if the asset is not loaded.
+        </span>
+   </dl>
+</dt>
+
 
 
         
@@ -1149,12 +1261,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         

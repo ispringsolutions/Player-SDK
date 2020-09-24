@@ -26,7 +26,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.presentation.slides.IAnimationStep.html">IAnimationStep</a></li><li><a href="ispring.presenter.presentation.slides.IAnimationSteps.html">IAnimationSteps</a></li><li><a href="ispring.presenter.presentation.slides.ISlide.html">ISlide</a></li><li><a href="ispring.presenter.presentation.slides.ISlideNotes.html">ISlideNotes</a></li><li><a href="ispring.presenter.presentation.slides.ISlides.html">ISlides</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.presentation.slides.IAnimationStep.html">IAnimationStep</a></li><li><a href="ispring.presenter.presentation.slides.IAnimationSteps.html">IAnimationSteps</a></li><li><a href="ispring.presenter.presentation.slides.ISlide.html">ISlide</a></li><li><a href="ispring.presenter.presentation.slides.ISlideNotes.html">ISlideNotes</a></li><li><a href="ispring.presenter.presentation.slides.ISlides.html">ISlides</a></li><li><a href="ispring.presenter.presentation.slides.ISlideShowTransition.html">ISlideShowTransition</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.narration.html">ispring.presenter.player.narration</a></li><li><a href="ispring.presenter.player.narration.audio.html">ispring.presenter.player.narration.audio</a></li><li><a href="ispring.presenter.player.narration.video.html">ispring.presenter.player.narration.video</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.meta.html">ispring.presenter.presentation.meta</a></li><li><a href="ispring.presenter.presentation.narration.html">ispring.presenter.presentation.narration</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.settings.html">ispring.presenter.presentation.settings</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
 </nav>
 
 <div id="main">
@@ -117,6 +117,9 @@
         
             <dt class="interface"><a href="ispring.presenter.presentation.slides.ISlides.html">ISlides</a></dt>
             <dd></dd>
+        
+            <dt class="interface"><a href="ispring.presenter.presentation.slides.ISlideShowTransition.html">ISlideShowTransition</a></dt>
+            <dd></dd>
         </dl>
     
 
@@ -128,14 +131,14 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="SlideType"><span class="type-signature">(static) </span>SlideType<span class="type-signature"> :string</span></h4>
+    <h4 class="name" id=".SlideType"><span class="type-signature">(static) </span>SlideType<span class="type-signature"> :string</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The SlideType object properties provide values for the <a href="ispring.presenter.presentation.slides.ISlide.html#type"><code>type()</code></a>method of the <a href="ispring.presenter.presentation.slides.ISlide.html"><code>ISlide</code></a> interface.
+        The <code>SlideType</code> object properties provide values for the <a href="ispring.presenter.presentation.slides.ISlide.html#type"><code>type()</code></a>method of the <a href="ispring.presenter.presentation.slides.ISlide.html"><code>ISlide</code></a> interface.
     </div>
     
 
@@ -262,6 +265,4503 @@
             
 
             <td class="description last">Indicates that the slide is an iSpring QuizMaker quiz.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SCENARIO_SLIDE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>scenario</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that the slide is an iSpring Visuals interaction.</td>
+        </tr>
+
+    
+    </tbody>
+</table></dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".TransitionEffectType"><span class="type-signature">(static) </span>TransitionEffectType<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <code>TransitionEffectType</code> enumerates PowerPoint transition effectsfor <code>effectType()</code> methodof <a href="ispring.presenter.presentation.slides.ISlideShowTransition.html"><code>ISlideShowTransition</code></a> interface.
+    </div>
+    
+
+    
+        <h5>
+            Type:
+            
+<span class="param-type">string</span>
+
+
+        </h5>
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>NULL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>null</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CUT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Cut</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CUT_THROUGH_BLACK</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CutThroughBlack</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RANDOM_TRANSITION</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RandomTransition</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BLINDS_HORIZONTAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>BlindsHorizontal</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BLINDS_VERTICAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>BlindsVertical</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CHECKERBOARD_ACROSS</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CheckerboardAcross</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CHECKERBOARD_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CheckerboardDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COVER_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CoverLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COVER_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CoverUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COVER_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CoverRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COVER_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CoverDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COVER_LEFT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CoverLeftUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COVER_RIGHT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CoverRightUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COVER_LEFT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CoverLeftDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COVER_RIGHT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CoverRightDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DISSOLVE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Dissolve</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FADE_THROUGH_BLACK</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FadeThroughBlack</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNCOVER_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>UncoverLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNCOVER_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>UncoverUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNCOVER_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>UncoverRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNCOVER_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>UncoverDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNCOVER_LEFT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>UncoverLeftUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNCOVER_RIGHT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>UncoverRightUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNCOVER_LEFT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>UncoverLeftDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNCOVER_RIGHT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>UncoverRightDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RANDOM_BARS_HORIZONTAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RandomBarsHorizontal</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RANDOM_BARS_VERTICAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RandomBarsVertical</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>STRIPS_LEFT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>StripsLeftUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>STRIPS_RIGHT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>StripsRightUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>STRIPS_LEFT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>StripsLeftDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>STRIPS_RIGHT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>StripsRightDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WIPE_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WipeLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WIPE_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WipeUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WIPE_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WipeRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WIPE_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WipeDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BOX_OUT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>BoxOut</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BOX_IN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>BoxIn</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SPLIT_HORIZONTAL_OUT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>SplitHorizontalOut</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SPLIT_HORIZONTAL_IN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>SplitHorizontalIn</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SPLIT_VERTICAL_OUT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>SplitVerticalOut</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SPLIT_VERTICAL_IN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>SplitVerticalIn</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SHAPE_CIRCLE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ShapeCircle</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SHAPE_DIAMOND</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ShapeDiamond</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COMB_HORIZONTAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CombHorizontal</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>COMB_VERTICAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CombVertical</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FADE_SMOOTHLY</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FadeSmoothly</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NEWSFLASH</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Newsflash</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SHAPE_PLUS</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ShapePlus</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PUSH_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PushDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PUSH_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PushLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PUSH_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PushRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PUSH_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PushUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WEDGE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Wedge</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WHEEL_1_SPOKE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Wheel1Spoke</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WHEEL_2_SPOKES</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Wheel2Spokes</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WHEEL_3_SPOKES</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Wheel3Spokes</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WHEEL_4_SPOKES</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Wheel4Spokes</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WHEEL_8_SPOKES</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Wheel8Spokes</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WHEEL_REVERSE_1_SPOKE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WheelReverse1Spoke</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>VORTEX_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>VortexLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>VORTEX_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>VortexUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>VORTEX_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>VortexRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>VORTEX_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>VortexDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RIPPLE_CENTER</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RippleCenter</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RIPPLE_RIGHT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RippleRightUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RIPPLE_LEFT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RippleLeftUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RIPPLE_LEFT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RippleLeftDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RIPPLE_RIGHT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RippleRightDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GLITTER_DIAMOND_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GlitterDiamondLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GLITTER_DIAMOND_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GlitterDiamondUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GLITTER_DIAMOND_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GlitterDiamondRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GLITTER_DIAMOND_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GlitterDiamondDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GLITTER_HEXAGON_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GlitterHexagonLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GLITTER_HEXAGON_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GlitterHexagonUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GLITTER_HEXAGON_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GlitterHexagonRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GLITTER_HEXAGON_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GlitterHexagonDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GALLERY_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GalleryLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GALLERY_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>GalleryRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CONVEYOR_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ConveyorLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CONVEYOR_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ConveyorRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DOORS_VERTICAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>DoorsVertical</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DOORS_HORIZONTAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>DoorsHorizontal</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WINDOW_VERTICAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WindowVertical</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WINDOW_HORIZONTAL</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WindowHorizontal</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WARP_IN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WarpIn</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WARP_OUT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WarpOut</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FLY_THROUGH_IN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FlyThroughIn</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FLY_THROUGH_OUT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FlyThroughOut</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FLY_THROUGH_IN_BOUNCE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FlyThroughInBounce</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FLY_THROUGH_OUT_BOUNCE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FlyThroughOutBounce</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>REVEAL_SMOOTH_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RevealSmoothLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>REVEAL_SMOOTH_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RevealSmoothRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>REVEAL_BLACK_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RevealBlackLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>REVEAL_BLACK_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RevealBlackRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>HONEYCOMB</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Honeycomb</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FERRIS_WHEEL_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FerrisWheelLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FERRIS_WHEEL_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FerrisWheelRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SWITCH_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>SwitchLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SWITCH_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>SwitchRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FLIP_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FlipLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FLIP_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FlipRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FLASHBULB</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Flashbulb</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SHRED_STRIPS_IN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ShredStripsIn</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SHRED_STRIPS_OUT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ShredStripsOut</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SHRED_RECTANGLE_IN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ShredRectangleIn</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SHRED_RECTANGLE_OUT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ShredRectangleOut</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CUBE_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CubeLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CUBE_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CubeUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CUBE_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CubeRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CUBE_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>CubeDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ROTATE_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RotateLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ROTATE_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RotateUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ROTATE_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RotateRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ROTATE_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>RotateDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BOX_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>BoxLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BOX_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>BoxUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BOX_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>BoxRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BOX_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>BoxDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ORBIT_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>OrbitLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ORBIT_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>OrbitUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ORBIT_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>OrbitRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ORBIT_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>OrbitDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PAN_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PanLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PAN_UP</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PanUp</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PAN_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PanRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PAN_DOWN</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PanDown</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AIRPLANE_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>AirplaneLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AIRPLANE_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>AirplaneRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ORIGAMI_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>OrigamiLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ORIGAMI_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>OrigamiRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DRAPE_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>DrapeLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DRAPE_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>DrapeRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FALL_OVER_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FallOverLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FALL_OVER_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>FallOverRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CURTAINS</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Curtains</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FRACTURE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Fracture</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CRUSH</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Crush</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WIND_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WindRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WIND_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>WindLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PEEL_OFF_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PeelOffLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PEEL_OFF_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PeelOffRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PRESTIGE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Prestige</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PAGE_CURL_DOUBLE_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PageCurlDoubleLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PAGE_CURL_DOUBLE_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PageCurlDoubleRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PAGE_CURL_SINGLE_LEFT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PageCurlSingleLeft</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PAGE_CURL_SINGLE_RIGHT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>PageCurlSingleRight</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MORPH_BY_OBJECT</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>MorphByObject</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MORPH_BY_WORD</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>MorphByWord</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MORPH_BY_CHAR</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>MorphByChar</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ZOOM</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>Zoom</code>
+                
+                </td>
+            
+
+            <td class="description last"></td>
         </tr>
 
     

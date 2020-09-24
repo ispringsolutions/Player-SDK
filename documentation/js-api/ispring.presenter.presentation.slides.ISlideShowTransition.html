@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Interface: IAnimationStep</title>
+    <title>JSDoc: Interface: ISlideShowTransition</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -43,7 +43,7 @@
                 
         </h5>
         <span class="ancestors">
-            <a href="ispring.html">ispring</a><a href="ispring.presenter.html">.presenter</a><a href="ispring.presenter.presentation.html">.presentation</a><a href="ispring.presenter.presentation.slides.html">.slides</a>.IAnimationStep
+            <a href="ispring.html">ispring</a><a href="ispring.presenter.html">.presenter</a><a href="ispring.presenter.presentation.html">.presentation</a><a href="ispring.presenter.presentation.slides.html">.slides</a>.ISlideShowTransition
         </span>
         <div class="clear"></div>
     
@@ -61,7 +61,7 @@
 
     
     <div class="description">
-        The IAnimationStep interface provides information about the slide animation step.<p>An animation step is an animation sequence of the slide shapes playing automatically(no need for mouse clicks). Each animation step consists of the animation and pause phases.Slide shapes are animated during the animation phase. The pause phase begins afterthe animation phase and provides a delay between subsequent animation steps.</p><p>The IAnimationStep interface can be obtained using the<code>getStep()</code>method on the <a href="ispring.presenter.presentation.slides.IAnimationStep.html"><code>IAnimationSteps</code></a> interface.</p>
+        <code>ISlideShowTransition</code> interface provides the slide transition effect information
     </div>
     
 
@@ -140,87 +140,6 @@
             
 
 <dt>
-    <h4 class="name" id="automaticAdvance"><span class="type-signature"></span>automaticAdvance<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
-
-    
-</dt>
-
-<dd class="method_description">
-
-    
-    <div class="description">
-        Indicates whether the next animation step is started automaticallyafter the pause phase of the current animation step.
-    </div>
-    
-
-    
-
-    
-
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>Type: 
-<span class="param-type">boolean</span>
-
-</dt>
-</dl>
-
-        
-
-    
-</dd>
-
-        
-            
-
-<dt>
     <h4 class="name" id="duration"><span class="type-signature"></span>duration<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
 
     
@@ -230,7 +149,7 @@
 
     
     <div class="description">
-        Returns the total duration of the animation and pause phases.
+        Returns slide show transition duration in seconds.
     </div>
     
 
@@ -302,7 +221,7 @@
             
 
 <dt>
-    <h4 class="name" id="startTime"><span class="type-signature"></span>startTime<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id="effectType"><span class="type-signature"></span>effectType<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 </dt>
@@ -311,7 +230,7 @@
 
     
     <div class="description">
-        Returns the animation step start time relatively to the beginning of the slide.
+        Returns slide show <a href="ispring.presenter.presentation.slides.html#.TransitionEffectType"><code>transition effect type</code></a>.
     </div>
     
 
@@ -346,6 +265,13 @@
     
 
     
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.presentation.slides.html#.TransitionEffectType">ispring.presenter.presentation.slides.TransitionEffectType</a></li>
+        </ul>
+    </dd>
+    
 
     
 </dl>
@@ -369,7 +295,7 @@
 
 <dl>
     <dt>Type: 
-<span class="param-type">number</span>
+<span class="param-type">string</span>
 
 </dt>
 </dl>

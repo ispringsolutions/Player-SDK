@@ -26,7 +26,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.IPresentationPlaybackController.html">IPresentationPlaybackController</a></li><li><a href="ispring.presenter.player.IPresentationPlayer.html">IPresentationPlayer</a></li><li><a href="ispring.presenter.player.IPresentationView.html">IPresentationView</a></li><li><a href="ispring.presenter.player.IRestrictedPresentationPlaybackController.html">IRestrictedPresentationPlaybackController</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.IPresentationPlaybackController.html">IPresentationPlaybackController</a></li><li><a href="ispring.presenter.player.IPresentationPlayer.html">IPresentationPlayer</a></li><li><a href="ispring.presenter.player.IPresentationView.html">IPresentationView</a></li><li><a href="ispring.presenter.player.IRestrictedPresentationPlaybackController.html">IRestrictedPresentationPlaybackController</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.narration.html">ispring.presenter.player.narration</a></li><li><a href="ispring.presenter.player.narration.audio.html">ispring.presenter.player.narration.audio</a></li><li><a href="ispring.presenter.player.narration.video.html">ispring.presenter.player.narration.video</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.meta.html">ispring.presenter.presentation.meta</a></li><li><a href="ispring.presenter.presentation.narration.html">ispring.presenter.presentation.narration</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.settings.html">ispring.presenter.presentation.settings</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
 </nav>
 
 <div id="main">
@@ -61,7 +61,7 @@
 
     
     <div class="description">
-        The IPresentationPlayer interface provides access to the presentation and its view.<p>To obtain the IPresentationPlayer interface of the presentation, declare the <code>ispringPresentationConnector</code> object inthe global scope (on the <code>window</code> object) and load the presentation html using &lt;iframe&gt; element.The iSpring-generated presentation will call the <code>register()</code> method on the <code>ispringPresentationConnector</code>object and pass the IPresentation player interface as a parameter.</p><p>The following HTML code illustrates how to load the presentation and obtain its IPresentationPlayer interface.</p><pre style="background-color:#DEEBF7">&lt;html>&lt;body&gt;&lt;iframe id="frame" src="presentation.html" style="width:800px;height:600px;"&gt;&lt;/iframe&gt;&lt;script&gt;var ispringPresentationConnector = {}ispringPresentationConnector.register = function(player){    log("Player initialized"););&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+        The <code>IPresentationPlayer</code> interface provides access to the presentation and its view.<p>To obtain the IPresentationPlayer interface of the presentation, declare the <code>ispringPresentationConnector</code> object inthe global scope (on the <code>window</code> object) and load the presentation html using &lt;iframe&gt; element.The iSpring-generated presentation will call the <code>register()</code> method on the <code>ispringPresentationConnector</code>object and pass the IPresentation player interface as a parameter.</p><p>The following HTML code illustrates how to load the presentation and obtain its IPresentationPlayer interface.</p><pre style="background-color:#DEEBF7">&lt;iframe id="frame" src="presentation.html" style="width:800px;height:600px;"&gt;&lt;/iframe&gt;&lt;script&gt;var ispringPresentationConnector = {}ispringPresentationConnector.register = function(player){    log("Player initialized"););&lt;/script&gt;</pre>
     </div>
     
 
@@ -140,6 +140,94 @@
             
 
 <dt>
+    <h4 class="name" id="audioNarrationController"><span class="type-signature"></span>audioNarrationController<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.player.narration.audio.IAudioNarrationController.html">ispring.presenter.player.narration.audio.IAudioNarrationController</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns <a href="ispring.presenter.player.narration.audio.IAudioNarrationController.html"><code>IAudioNarrationController</code></a> interfacewhich provides access to audio tracks active at the moment.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.narration.audio.IAudioNarrationController.html">ispring.presenter.player.narration.audio.IAudioNarrationController</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>Type: 
+<span class="param-type"><a href="ispring.presenter.player.narration.audio.IAudioNarrationController.html">ispring.presenter.player.narration.audio.IAudioNarrationController</a></span>
+
+</dt>
+</dl>
+
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
     <h4 class="name" id="presentation"><span class="type-signature"></span>presentation<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.presentation.IPresentation.html">ispring.presenter.presentation.IPresentation</a>}</span></h4>
 
     
@@ -213,12 +301,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.presenter.presentation.IPresentation.html">ispring.presenter.presentation.IPresentation</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -296,12 +382,98 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">string</span>
 
+</dt>
+</dl>
 
-    </dt>
+        
+
+    
+</dd>
+
+        
+            
+
+<dt>
+    <h4 class="name" id="videoNarrationController"><span class="type-signature"></span>videoNarrationController<span class="signature">()</span><span class="type-signature"> &rarr; (non-null) {<a href="ispring.presenter.player.narration.video.IVideoNarrationController.html">ispring.presenter.player.narration.video.IVideoNarrationController</a>}</span></h4>
+
+    
+</dt>
+
+<dd class="method_description">
+
+    
+    <div class="description">
+        Returns <a href="ispring.presenter.player.narration.video.IVideoNarrationController.html"><code>IVideoNarrationController</code></a> interfacewhich provides access to video tracks active at the moment.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See also</dt>
+    <dd class="tag-see">
+        <ul>
+            <li class="seeAlso"><a href="ispring.presenter.player.narration.video.IVideoNarrationController.html">ispring.presenter.player.narration.video.IVideoNarrationController</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>Type: 
+<span class="param-type"><a href="ispring.presenter.player.narration.video.IVideoNarrationController.html">ispring.presenter.player.narration.video.IVideoNarrationController</a></span>
+
+</dt>
 </dl>
 
         
@@ -386,12 +558,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.presenter.player.IPresentationView.html">ispring.presenter.player.IPresentationView</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         

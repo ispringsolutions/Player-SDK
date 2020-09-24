@@ -523,6 +523,7 @@ dl
 {
     color: black;
     font-weight: normal;
+    font-family: Consolas, 'Lucida Console', Monaco, monospace;
 }
 
 .parameters_header

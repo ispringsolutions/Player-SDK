@@ -26,7 +26,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.restriction.INavigationRestriction.html">INavigationRestriction</a></li><li><a href="ispring.presenter.player.restriction.INavigationRestrictionReason.html">INavigationRestrictionReason</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.restriction.INavigationRestriction.html">INavigationRestriction</a></li><li><a href="ispring.presenter.player.restriction.INavigationRestrictionReason.html">INavigationRestrictionReason</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.narration.html">ispring.presenter.player.narration</a></li><li><a href="ispring.presenter.player.narration.audio.html">ispring.presenter.player.narration.audio</a></li><li><a href="ispring.presenter.player.narration.video.html">ispring.presenter.player.narration.video</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.meta.html">ispring.presenter.presentation.meta</a></li><li><a href="ispring.presenter.presentation.narration.html">ispring.presenter.presentation.narration</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.settings.html">ispring.presenter.presentation.settings</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
 </nav>
 
 <div id="main">
@@ -119,14 +119,14 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="NavigationActionType"><span class="type-signature">(static) </span>NavigationActionType<span class="type-signature"> :string</span></h4>
+    <h4 class="name" id=".NavigationActionType"><span class="type-signature">(static) </span>NavigationActionType<span class="type-signature"> :string</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The NavigationActionType object properties providevalues for the <a href="ispring.presenter.player.restriction.INavigationRestriction.html#navigationAction"><code>navigationAction()</code></a>method of the <a href="ispring.presenter.player.restriction.INavigationRestriction.html"><code>INavigationRestriction</code></a>interface.
+        The <code>NavigationActionType</code> object properties providevalues for the <a href="ispring.presenter.player.restriction.INavigationRestriction.html#navigationAction"><code>navigationAction()</code></a>method of the <a href="ispring.presenter.player.restriction.INavigationRestriction.html"><code>INavigationRestriction</code></a>interface.
     </div>
     
 
@@ -517,6 +517,93 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>SCENARIO_SWITCH_TO_NEXT_SLIDE</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>scenarioSwitchToNextSlide</code>
+                
+                </td>
+            
+
+            <td class="description last">Corresponds to the <a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoNextSlide"><code>gotoNextSlide()</code></a>method call on the <a href="ispring.presenter.player.IPresentationPlaybackController.html"><code>IPresentationPlaybackController</code></a> interfacewhen the current slide is a scenario and branching rules are applied to the current slide.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SCENARIO_SWITCH_TO_NEXT_SLIDE_WITHOUT_BRANCHING</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>scenarioSwitchToNextSlideWithoutBranching</code>
+                
+                </td>
+            
+
+            <td class="description last">Corresponds to the <a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoNextSlide"><code>gotoNextSlide()</code></a>method call on the <a href="ispring.presenter.player.IPresentationPlaybackController.html"><code>IPresentationPlaybackController</code></a> interfacewhen the current slide is a scenario and no branching rules are applied to the current slide.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SCENARIO_ARBITRARY_SLIDE_SWITCHING</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>ScenarioArbitrarySlideSwitching</code>
+                
+                </td>
+            
+
+            <td class="description last">Corresponds to the <a href="ispring.presenter.player.IPresentationPlaybackController.html#gotoSlide"><code>gotoSlide()</code></a>method call on the <a href="ispring.presenter.player.IPresentationPlaybackController.html"><code>IPresentationPlaybackController</code></a> interfacewhen the current slide is a scenario.</td>
+        </tr>
+
+    
     </tbody>
 </table></dl>
 
@@ -563,14 +650,14 @@
         
             
 <dt>
-    <h4 class="name" id="NavigationRestrictionReasonType"><span class="type-signature">(static) </span>NavigationRestrictionReasonType<span class="type-signature"> :string</span></h4>
+    <h4 class="name" id=".NavigationRestrictionReasonType"><span class="type-signature">(static) </span>NavigationRestrictionReasonType<span class="type-signature"> :string</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The NavigationRestrictionReasonType object properties providevalues for the <a href="ispring.presenter.player.restriction.INavigationRestrictionReason.html#type"><code>type()</code></a>method of the <a href="ispring.presenter.player.restriction.INavigationRestrictionReason.html"><code>INavigationRestrictionReason</code></a>interface.
+        The <code>NavigationRestrictionReasonType</code> object properties providevalues for the <a href="ispring.presenter.player.restriction.INavigationRestrictionReason.html#type"><code>type()</code></a>method of the <a href="ispring.presenter.player.restriction.INavigationRestrictionReason.html"><code>INavigationRestrictionReason</code></a>interface.
     </div>
     
 
@@ -961,6 +1048,93 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>PRECEDING_SCENARIO_NOT_COMPLETED</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>precedingScenarioNotCompleted</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that moving to the slide is not allowed until completing the scenario on one of preceeding slides.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PRECEDING_SCENARIO_NOT_PASSED</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>precedingScenarioNotPassed</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that moving to the slide is not allowed until passing the scenario on one of preceeding slides.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PRECEDING_SCENARIO_FAILED</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>precedingScenarioFailed</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that moving to the slide is not allowed because the user failed the scenario on one of the preceeding slides.</td>
+        </tr>
+
+    
     </tbody>
 </table></dl>
 
@@ -1007,14 +1181,14 @@
         
             
 <dt>
-    <h4 class="name" id="NavigationRestrictionSource"><span class="type-signature">(static) </span>NavigationRestrictionSource<span class="type-signature"> :string</span></h4>
+    <h4 class="name" id=".NavigationRestrictionSource"><span class="type-signature">(static) </span>NavigationRestrictionSource<span class="type-signature"> :string</span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        The NavigationRestrictionSource object properties providevalues for the <a href="ispring.presenter.player.restriction.INavigationRestriction.html#restrictionSource"><code>restrictionSource()</code></a>method of the <a href="ispring.presenter.player.restriction.INavigationRestriction.html"><code>INavigationRestriction</code></a>interface.
+        The <code>NavigationRestrictionSource</code> object properties providevalues for the <a href="ispring.presenter.player.restriction.INavigationRestriction.html#restrictionSource"><code>restrictionSource()</code></a>method of the <a href="ispring.presenter.player.restriction.INavigationRestriction.html"><code>INavigationRestriction</code></a>interface.
     </div>
     
 
@@ -1141,6 +1315,35 @@
             
 
             <td class="description last">Indicates that the navigation is restricted by the quiz navigation settings.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SCENARIO_NAVIGATION_SETTINGS</code></td>
+            
+
+            <td class="type">
+            
+                <code>
+<span class="param-type">string</span>
+
+</code>
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    <code>scenarioNavigationSettings</code>
+                
+                </td>
+            
+
+            <td class="description last">Indicates that the navigation is restricted by the scenario navigation settings.</td>
         </tr>
 
     

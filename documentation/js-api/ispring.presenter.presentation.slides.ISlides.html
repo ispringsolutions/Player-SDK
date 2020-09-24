@@ -26,7 +26,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.presentation.slides.IAnimationStep.html">IAnimationStep</a></li><li><a href="ispring.presenter.presentation.slides.IAnimationSteps.html">IAnimationSteps</a></li><li><a href="ispring.presenter.presentation.slides.ISlide.html">ISlide</a></li><li><a href="ispring.presenter.presentation.slides.ISlideNotes.html">ISlideNotes</a></li><li><a href="ispring.presenter.presentation.slides.ISlides.html">ISlides</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.presentation.slides.IAnimationStep.html">IAnimationStep</a></li><li><a href="ispring.presenter.presentation.slides.IAnimationSteps.html">IAnimationSteps</a></li><li><a href="ispring.presenter.presentation.slides.ISlide.html">ISlide</a></li><li><a href="ispring.presenter.presentation.slides.ISlideNotes.html">ISlideNotes</a></li><li><a href="ispring.presenter.presentation.slides.ISlides.html">ISlides</a></li><li><a href="ispring.presenter.presentation.slides.ISlideShowTransition.html">ISlideShowTransition</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.narration.html">ispring.presenter.player.narration</a></li><li><a href="ispring.presenter.player.narration.audio.html">ispring.presenter.player.narration.audio</a></li><li><a href="ispring.presenter.player.narration.video.html">ispring.presenter.player.narration.video</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.meta.html">ispring.presenter.presentation.meta</a></li><li><a href="ispring.presenter.presentation.narration.html">ispring.presenter.presentation.narration</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.settings.html">ispring.presenter.presentation.settings</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
 </nav>
 
 <div id="main">
@@ -61,7 +61,7 @@
 
     
     <div class="description">
-        The ISlides interface represents a collection of the presentation slides.<p>To obtain the ISlides interface use the <a href="ispring.presenter.presentation.IPresentation.html#slides"><code>slides()</code></a> methodon the <a href="ispring.presenter.presentation.IPresentation.html"><code>IPresentation</code></a> interface.</p>
+        The <code>ISlides</code> interface represents a collection of the presentation slides.<p>To obtain the <code>ISlides</code> interface use the <a href="ispring.presenter.presentation.IPresentation.html#slides"><code>slides()</code></a> methodon the <a href="ispring.presenter.presentation.IPresentation.html"><code>IPresentation</code></a> interface.</p>
     </div>
     
 
@@ -218,7 +218,7 @@
 
             
 
-            <td class="description last">The position within the presentation represented by the                                                              <a href="ispring.presenter.presentation.ITimestamp.html"><code>ITimestamp</code></a>                                                              interface to convert into the time offset.                                                              <p>You may pass an existing timestamp object obtained from the presentation                                                              player or create a new compatible timestamp using the                                                              <a href="ispring.presenter.presentation.slides.ISlides.html#createTimestamp"><code>createTimestamp()</code></a>                                                              method.</p></td>
+            <td class="description last">The position within the presentation represented by the															   <a href="ispring.presenter.presentation.ITimestamp.html"><code>ITimestamp</code></a>															   interface to convert into the time offset.															   <p>You may pass an existing timestamp object obtained from the presentation															   player or create a new compatible timestamp using the															   <a href="ispring.presenter.presentation.slides.ISlides.html#createTimestamp"><code>createTimestamp()</code></a>															   method.</p></td>
         </tr>
 
     
@@ -352,12 +352,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -563,12 +561,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -653,12 +649,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -837,12 +831,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -929,12 +921,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -1083,12 +1073,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -1246,12 +1234,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.presenter.presentation.slides.ISlide.html">ispring.presenter.presentation.slides.ISlide</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -1338,12 +1324,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -1428,12 +1412,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -1520,12 +1502,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         

@@ -26,7 +26,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.transitions.ISlideTransitionController.html">ISlideTransitionController</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.transitions.ISlideTransitionController.html">ISlideTransitionController</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.narration.html">ispring.presenter.player.narration</a></li><li><a href="ispring.presenter.player.narration.audio.html">ispring.presenter.player.narration.audio</a></li><li><a href="ispring.presenter.player.narration.video.html">ispring.presenter.player.narration.video</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.meta.html">ispring.presenter.presentation.meta</a></li><li><a href="ispring.presenter.presentation.narration.html">ispring.presenter.presentation.narration</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.settings.html">ispring.presenter.presentation.settings</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
 </nav>
 
 <div id="main">
@@ -61,7 +61,7 @@
 
     
     <div class="description">
-        The ISlideTransitionController interface provides information about the current state and progress ofthe slide transition effect.<p>To obtain the ISlideTransitionController interface use the<a href="ispring.presenter.player.IPresentationPlaybackController.html#slideTransitionController"><code>slideTransitionController()</code></a>method on the <a href="ispring.presenter.player.IPresentationPlaybackController.html"><code>IPresentationPlaybackController</code></a> interface.</p>
+        The <code>ISlideTransitionController</code> interface provides information about the current state and progress ofthe slide transition effect.<p>To obtain the <code>ISlideTransitionController</code> interface use the<a href="ispring.presenter.player.IPresentationPlaybackController.html#slideTransitionController"><code>slideTransitionController()</code></a>method on the <a href="ispring.presenter.player.IPresentationPlaybackController.html"><code>IPresentationPlaybackController</code></a> interface.</p>
     </div>
     
 
@@ -156,7 +156,7 @@
 
     
     <div class="description">
-        The state of the slide transition controller.<p>The <a href="ispring.presenter.player.transitions.html#TransitionPlaybackState"><code>ispring.presenter.player.transitions.TransitionPlaybackState</code></a> object properties define the possible valuesof the <code>state()</code> method.</p>
+        The state of the slide transition controller.<p>The <a href="ispring.presenter.player.transitions.html#.TransitionPlaybackState"><code>ispring.presenter.player.transitions.TransitionPlaybackState</code></a> object properties define the possible valuesof the <code>state()</code> method.</p>
     </div>
     
 
@@ -194,7 +194,7 @@
     <dt class="tag-see">See also</dt>
     <dd class="tag-see">
         <ul>
-            <li class="seeAlso"><a href="ispring.presenter.player.transitions.html#TransitionPlaybackState">ispring.presenter.player.transitions.TransitionPlaybackState</a></li>
+            <li class="seeAlso"><a href="ispring.presenter.player.transitions.html#.TransitionPlaybackState">ispring.presenter.player.transitions.TransitionPlaybackState</a></li>
         </ul>
     </dd>
     
@@ -220,12 +220,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">string</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -246,7 +244,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the<code>transitionEffectComplete</code> event when a slide transition effect is started.<p>The event dispatcher passes a new slide index to the event handling function. See the following example:</p><pre>    var slideTransitionController;    // ...    slideTransitionController.transitionEffectCompleteEvent().addHandler(function(slideIndex){        window.console.log("Transition to slide #" + slideIndex + " has been completed.");    });</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the<code>transitionEffectComplete</code> event when a slide transition effect is started.<p>The event dispatcher passes a new slide index to the event handling function. See the following example:</p><pre>	 var slideTransitionController;	 // ...	 slideTransitionController.transitionEffectCompleteEvent().addHandler(function(slideIndex){		 window.console.log("Transition to slide #" + slideIndex + " has been completed.");	 });</pre>
     </div>
     
 
@@ -303,12 +301,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -329,7 +325,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the<code>transitionEffectStart</code> event when a slide transition effect is started.<p>The event dispatcher passes a new slide index to the event handling function. See the following example:</p><pre>    var slideTransitionController;    // ...    slideTransitionController.transitionEffectStartEvent().addHandler(function(slideIndex){        window.console.log("Transition to slide #" + slideIndex + " has been started.");    });</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the<code>transitionEffectStart</code> event when a slide transition effect is started.<p>The event dispatcher passes a new slide index to the event handling function. See the following example:</p><pre>	 var slideTransitionController;	 // ...	 slideTransitionController.transitionEffectStartEvent().addHandler(function(slideIndex){		 window.console.log("Transition to slide #" + slideIndex + " has been started.");	 });</pre>
     </div>
     
 
@@ -386,12 +382,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -469,12 +463,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
