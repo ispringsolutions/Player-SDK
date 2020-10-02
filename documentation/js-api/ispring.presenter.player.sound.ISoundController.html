@@ -26,7 +26,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.sound.ISoundController.html">ISoundController</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.sound.ISoundController.html">ISoundController</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.narration.html">ispring.presenter.player.narration</a></li><li><a href="ispring.presenter.player.narration.audio.html">ispring.presenter.player.narration.audio</a></li><li><a href="ispring.presenter.player.narration.video.html">ispring.presenter.player.narration.video</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.meta.html">ispring.presenter.presentation.meta</a></li><li><a href="ispring.presenter.presentation.narration.html">ispring.presenter.presentation.narration</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.settings.html">ispring.presenter.presentation.settings</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
 </nav>
 
 <div id="main">
@@ -61,7 +61,7 @@
 
     
     <div class="description">
-        The ISoundController interface is used to control the sound volume level of the presentation.<p>To obtain the ISoundController interface from the presentation view use the<a href="ispring.presenter.player.IPresentationView.html#soundController"><code>soundController()</code></a> method on the<a href="ispring.presenter.player.IPresentationView.html"><code>IPresentationView</code></a> interface.</p>
+        The <code>ISoundController</code> interface is used to control the sound volume level of the presentation.<p>To obtain the ISoundController interface from the presentation view use the<a href="ispring.presenter.player.IPresentationView.html#soundController"><code>soundController()</code></a> method on the<a href="ispring.presenter.player.IPresentationView.html"><code>IPresentationView</code></a> interface.</p>
     </div>
     
 
@@ -281,7 +281,7 @@
 
     
     <div class="description">
-        Indicates whether the sound is muted.<p>If the sound is muted, the <a href="ispring.presenter.player.sound.ISoundController.html#realVolume"><code>real volume</code></a> is 0regardless the value returned by the {ispring.presenter.player.sound.ISoundController#volume} method.</p>
+        Indicates whether the sound is muted.<p>If the sound is muted, the <a href="ispring.presenter.player.sound.ISoundController.html#realVolume"><code>real volume</code></a> is 0regardless the value returned by the <a href="ispring.presenter.player.sound.ISoundController.html#volume"><code>volume()</code></a> method.</p>
     </div>
     
 
@@ -347,12 +347,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">boolean</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -437,12 +435,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -463,7 +459,7 @@
 
     
     <div class="description">
-        Returns the real sound volume level takin the <a href="ispring.presenter.player.sound.ISoundController.html#muted"><code>muted state</code></a>into account.<p>If the sound is muted, the <code>realVolume()</code> method returns 0. Otherwise the value of the[volume()]<a href="ispring.presenter.player.sound.ISoundController.html#volume"><code>volume()</code></a> method is returned.</p>
+        Returns the real sound volume level takin the <a href="ispring.presenter.player.sound.ISoundController.html#muted"><code>muted state</code></a>into account.<p>If the sound is muted, the <code>realVolume()</code> method returns 0. Otherwise the value of the<a href="ispring.presenter.player.sound.ISoundController.html#volume"><code>volume()</code></a> method is returned.</p>
     </div>
     
 
@@ -529,12 +525,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -619,12 +613,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -855,12 +847,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">number</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -945,12 +935,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         

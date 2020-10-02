@@ -26,7 +26,7 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.clock.IPresentationClock.html">IPresentationClock</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Interfaces</h3><ul><li><a href="ispring.presenter.player.clock.IPresentationClock.html">IPresentationClock</a></li></ul><h3>Namespaces</h3><ul><li><a href="ispring.events.html">ispring.events</a></li><li><a href="ispring.presenter.player.html">ispring.presenter.player</a></li><li><a href="ispring.presenter.player.clock.html">ispring.presenter.player.clock</a></li><li><a href="ispring.presenter.player.narration.html">ispring.presenter.player.narration</a></li><li><a href="ispring.presenter.player.narration.audio.html">ispring.presenter.player.narration.audio</a></li><li><a href="ispring.presenter.player.narration.video.html">ispring.presenter.player.narration.video</a></li><li><a href="ispring.presenter.player.restriction.html">ispring.presenter.player.restriction</a></li><li><a href="ispring.presenter.player.sound.html">ispring.presenter.player.sound</a></li><li><a href="ispring.presenter.player.transitions.html">ispring.presenter.player.transitions</a></li><li><a href="ispring.presenter.presentation.html">ispring.presenter.presentation</a></li><li><a href="ispring.presenter.presentation.assets.html">ispring.presenter.presentation.assets</a></li><li><a href="ispring.presenter.presentation.meta.html">ispring.presenter.presentation.meta</a></li><li><a href="ispring.presenter.presentation.narration.html">ispring.presenter.presentation.narration</a></li><li><a href="ispring.presenter.presentation.resources.html">ispring.presenter.presentation.resources</a></li><li><a href="ispring.presenter.presentation.resources.references.html">ispring.presenter.presentation.resources.references</a></li><li><a href="ispring.presenter.presentation.settings.html">ispring.presenter.presentation.settings</a></li><li><a href="ispring.presenter.presentation.slides.html">ispring.presenter.presentation.slides</a></li><li><a href="ispring.utils.assets.html">ispring.utils.assets</a></li></ul>
 </nav>
 
 <div id="main">
@@ -61,7 +61,7 @@
 
     
     <div class="description">
-        The IPresentationClock interface provides information about the current playback position and the state of thepresentation playback controller.<p>The IPresentationClock interface can be obtained using the <a href="ispring.presenter.player.IPresentationPlaybackController.html#clock"><code>clock()</code></a>method on the <a href="ispring.presenter.player.IPresentationPlaybackController.html"><code>IPresentationPlaybackController</code></a></p> interface.
+        The <code>IPresentationClock</code> interface provides information about the current playback position and the state of thepresentation playback controller.<p>The <code>IPresentationClock</code> interface can be obtained using the <a href="ispring.presenter.player.IPresentationPlaybackController.html#clock"><code>clock()</code></a>method on the <a href="ispring.presenter.player.IPresentationPlaybackController.html"><code>IPresentationPlaybackController</code></a> interface.</p>
     </div>
     
 
@@ -213,12 +213,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">boolean</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -239,7 +237,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>bufferStateChange</code> eventwhen the buffering state is changed.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>    var clock; // IPresentationClock    //...    clock.bufferStateChangeEvent().addHandler(function(theClock){        window.console.log("Clock buffering state has been changed to", theClock.buffering());    });</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>bufferStateChange</code> eventwhen the buffering state is changed.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>	 var clock; // IPresentationClock	 //...	 clock.bufferStateChangeEvent().addHandler(function(theClock){		 window.console.log("Clock buffering state has been changed to", theClock.buffering());	 });</pre>
     </div>
     
 
@@ -303,12 +301,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -397,12 +393,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">boolean</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -487,12 +481,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">boolean</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -513,7 +505,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>start</code> eventwhen the clock is started.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>    var clock; // IPresentationClock    //...    clock.startEvent().addHandler(function(theClock){        var ts = theClock.timestamp();        window.console.log("Clock has been started at slide:", ts.slideIndex(), "step:", ts.stepIndex(), "time offset:", ts.timeOffset());    });</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>start</code> eventwhen the clock is started.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>	 var clock; // IPresentationClock	 //...	 clock.startEvent().addHandler(function(theClock){		 var ts = theClock.timestamp();		 window.console.log("Clock has been started at slide:", ts.slideIndex(), "step:", ts.stepIndex(), "time offset:", ts.timeOffset());	 });</pre>
     </div>
     
 
@@ -570,12 +562,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -596,7 +586,7 @@
 
     
     <div class="description">
-        Returns the state of the clock. The <a href="ispring.presenter.player.clock.html#PresentationClockState"><code>ispring.presenter.player.clock.PresentationClockState</code></a> object propertiesdefine the possible values of the <code>state()</code> method.
+        Returns the state of the clock. The <a href="ispring.presenter.player.clock.html#.PresentationClockState"><code>ispring.presenter.player.clock.PresentationClockState</code></a> object propertiesdefine the possible values of the <code>state()</code> method.
     </div>
     
 
@@ -634,7 +624,7 @@
     <dt class="tag-see">See also</dt>
     <dd class="tag-see">
         <ul>
-            <li class="seeAlso"><a href="ispring.presenter.player.clock.html#PresentationClockState">ispring.presenter.player.clock.PresentationClockState</a></li>
+            <li class="seeAlso"><a href="ispring.presenter.player.clock.html#.PresentationClockState">ispring.presenter.player.clock.PresentationClockState</a></li>
         </ul>
     </dd>
     
@@ -660,12 +650,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">string</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -686,7 +674,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>stateChange</code> eventwhen the clock state is changed.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>    var clock; // IPresentationClock    //...    clock.stateChangeEvent().addHandler(function(theClock){        window.console.log("Clock state has been changed to", theClock.state());    });</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>stateChange</code> eventwhen the clock state is changed.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>	 var clock; // IPresentationClock	 //...	 clock.stateChangeEvent().addHandler(function(theClock){		 window.console.log("Clock state has been changed to", theClock.state());	 });</pre>
     </div>
     
 
@@ -750,12 +738,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -776,7 +762,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>stop</code> eventwhen the clock is stopped.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>    var clock; // IPresentationClock    //...    clock.stopEvent().addHandler(function(theClock){        var ts = theClock.timestamp();        window.console.log("Clock has been stopped at slide:", ts.slideIndex(), "step:", ts.stepIndex(), "time offset:", ts.timeOffset());    });</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>stop</code> eventwhen the clock is stopped.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>	 var clock; // IPresentationClock	 //...	 clock.stopEvent().addHandler(function(theClock){		 var ts = theClock.timestamp();		 window.console.log("Clock has been stopped at slide:", ts.slideIndex(), "step:", ts.stepIndex(), "time offset:", ts.timeOffset());	 });</pre>
     </div>
     
 
@@ -833,12 +819,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -916,12 +900,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type">boolean</span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -942,7 +924,7 @@
 
     
     <div class="description">
-        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>tick</code> eventwhen the clock is updated.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>    var clock; // IPresentationClock    //...    clock.tickEvent().addHandler(function(theClock){        var ts = theClock.timestamp();        window.console.log("Tick. Slide:", ts.slideIndex(), "; step: ", ts.stepIndex(), "; timeOffset: ", ts.timeOffset());    });</pre>
+        Returns the <a href="ispring.events.IEventDispatcher.html"><code>IEventDispatcher</code></a> interface dispatching the <code>tick</code> eventwhen the clock is updated.<p>The returned event dispatcher passes the presentation clock reference to the event handling function.See the following example:</p><pre>	 var clock; // IPresentationClock	 //...	 clock.tickEvent().addHandler(function(theClock){		 var ts = theClock.timestamp();		 window.console.log("Tick. Slide:", ts.slideIndex(), "; step: ", ts.stepIndex(), "; timeOffset: ", ts.timeOffset());	 });</pre>
     </div>
     
 
@@ -999,12 +981,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.events.IEventDispatcher.html">ispring.events.IEventDispatcher</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
@@ -1089,12 +1069,10 @@
 
 
 <dl>
-    <dt>
-        Type: 
+    <dt>Type: 
 <span class="param-type"><a href="ispring.presenter.presentation.ITimestamp.html">ispring.presenter.presentation.ITimestamp</a></span>
 
-
-    </dt>
+</dt>
 </dl>
 
         
